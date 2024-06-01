@@ -1,0 +1,25 @@
+streamlit
+warnings
+numpy
+docx2txt
+logger 
+os
+streamlit_quill
+librosa 
+gensim
+heap
+whisper
+pytube
+joblib
+nltk
+rake_nltk
+scikit_learn
+spacy
+spacy_streamlit 
+sumy
+wordcloud
+textblob
+python -m spacy download en_core_web_sm
+seaborn
+Pillow
+docx

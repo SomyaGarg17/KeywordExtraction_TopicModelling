@@ -1,0 +1,1264 @@
+2024-05-30/20:21:33		init done
+2024-05-30/20:29:21		init done
+2024-05-30/20:53:17		init done
+2024-05-30/21:20:53		init done
+2024-05-30/21:29:57		init done
+2024-05-30/21:31:39		init done
+2024-05-30/21:31:42		init done
+2024-05-30/21:31:42		data processed to str
+2024-05-30/21:31:42		updated data to session from doc string
+2024-05-30/21:31:42		starting editor
+2024-05-30/21:31:42		returning editor new content
+2024-05-30/21:31:42		Saving userdata
+2024-05-30/21:31:42		file saved
+2024-05-30/21:31:42		user edited data saved. no extracting data
+2024-05-30/21:31:43		init done
+2024-05-30/21:31:43		starting editor
+2024-05-30/21:31:43		returning editor new content
+2024-05-30/21:31:43		Saving userdata
+2024-05-30/21:31:43		file saved
+2024-05-30/21:31:43		user edited data saved. no extracting data
+2024-05-30/21:33:48		init done
+2024-05-30/21:33:53		init done
+2024-05-30/21:33:55		init done
+2024-05-30/21:33:55		data processed to str
+2024-05-30/21:33:55		updated data to session from doc string
+2024-05-30/21:33:55		starting editor
+2024-05-30/21:33:55		returning editor new content
+2024-05-30/21:33:55		Saving userdata
+2024-05-30/21:33:55		file saved
+2024-05-30/21:33:55		user edited data saved. no extracting data
+2024-05-30/21:33:58		init done
+2024-05-30/21:33:58		starting editor
+2024-05-30/21:33:58		returning editor new content
+2024-05-30/21:33:58		Saving userdata
+2024-05-30/21:33:58		file saved
+2024-05-30/21:33:58		user edited data saved. no extracting data
+2024-05-30/21:33:55		init done
+2024-05-30/21:33:55		starting editor
+2024-05-30/21:33:55		returning editor new content
+2024-05-30/21:33:55		Saving userdata
+2024-05-30/21:33:55		file saved
+2024-05-30/21:33:55		user edited data saved. no extracting data
+2024-05-30/21:31:42		starting preprocessing
+2024-05-30/21:31:43		starting preprocessing
+2024-05-30/21:33:55		starting preprocessing
+2024-05-30/21:33:55		trying to load eng stopwords from model
+2024-05-30/21:33:55		trying loading wordlemma
+2024-05-30/21:33:55		loading failed trying to download wordnetm and omw 1.4
+2024-05-30/21:33:55		starting preprocessing
+2024-05-30/21:33:55		trying to load eng stopwords from model
+2024-05-30/21:33:55		trying loading wordlemma
+2024-05-30/21:33:55		loading failed trying to download wordnetm and omw 1.4
+2024-05-30/21:33:58		starting preprocessing
+2024-05-30/21:33:58		trying to load eng stopwords from model
+2024-05-30/21:33:58		trying loading wordlemma
+2024-05-30/21:33:58		loading failed trying to download wordnetm and omw 1.4
+2024-05-30/21:34:00		starting preprocessing
+2024-05-30/21:34:00		trying to load eng stopwords from model
+2024-05-30/21:34:00		trying loading wordlemma
+2024-05-30/21:34:00		loading failed trying to download wordnetm and omw 1.4
+2024-05-30/21:34:20		lemmatize words preprocessing done
+2024-05-30/21:34:20		lemmatize words preprocessing done
+2024-05-30/21:34:23		lemmatize words preprocessing done
+2024-05-30/21:34:24		lemmatize words preprocessing done
+2024-05-30/21:34:24		spacy + text rank function starting
+2024-05-30/21:34:26		text rank done
+2024-05-30/21:34:26		data cleaned and returned
+2024-05-30/21:34:00		init done
+2024-05-30/21:34:00		starting editor
+2024-05-30/21:34:00		returning editor new content
+2024-05-30/21:34:00		Saving userdata
+2024-05-30/21:34:00		file saved
+2024-05-30/21:34:00		user edited data saved. no extracting data
+2024-05-30/21:34:26		file saved
+2024-05-30/21:34:26		data extracted and appended to the original userdata
+2024-05-30/21:35:10		init done
+2024-05-30/21:35:10		starting editor
+2024-05-30/21:35:10		returning editor new content
+2024-05-30/21:35:10		Saving userdata
+2024-05-30/21:35:10		file saved
+2024-05-30/21:35:10		user edited data saved. no extracting data
+2024-05-30/21:35:12		file saved
+2024-05-30/21:35:12		data extracted and appended to the original userdata
+2024-05-30/21:35:12		init done
+2024-05-30/21:35:12		starting editor
+2024-05-30/21:35:12		returning editor new content
+2024-05-30/21:35:12		Saving userdata
+2024-05-30/21:35:12		file saved
+2024-05-30/21:35:12		user edited data saved. no extracting data
+2024-05-30/21:35:13		file saved
+2024-05-30/21:35:13		data extracted and appended to the original userdata
+2024-05-30/21:35:17		init done
+2024-05-30/21:35:17		starting editor
+2024-05-30/21:35:17		returning editor new content
+2024-05-30/21:35:17		Saving userdata
+2024-05-30/21:35:17		file saved
+2024-05-30/21:35:17		user edited data saved. no extracting data
+2024-05-30/21:35:18		file saved
+2024-05-30/21:35:18		data extracted and appended to the original userdata
+2024-05-30/21:35:10		starting preprocessing
+2024-05-30/21:35:10		trying to load eng stopwords from model
+2024-05-30/21:35:10		trying loading wordlemma
+2024-05-30/21:35:10		lemmatize words preprocessing done
+2024-05-30/21:35:10		spacy + text rank function starting
+2024-05-30/21:35:12		text rank done
+2024-05-30/21:35:12		data cleaned and returned
+2024-05-30/21:35:12		starting preprocessing
+2024-05-30/21:35:12		trying to load eng stopwords from model
+2024-05-30/21:35:12		trying loading wordlemma
+2024-05-30/21:35:12		lemmatize words preprocessing done
+2024-05-30/21:35:12		spacy + text rank function starting
+2024-05-30/21:35:13		text rank done
+2024-05-30/21:35:13		data cleaned and returned
+2024-05-30/21:35:13		PDF File saved
+2024-05-30/21:35:17		starting preprocessing
+2024-05-30/21:35:17		trying to load eng stopwords from model
+2024-05-30/21:35:17		trying loading wordlemma
+2024-05-30/21:35:17		lemmatize words preprocessing done
+2024-05-30/21:35:17		spacy + text rank function starting
+2024-05-30/21:35:18		text rank done
+2024-05-30/21:35:18		data cleaned and returned
+2024-05-30/21:35:18		PDF File saved
+2024-05-30/22:55:47		init done
+2024-05-30/22:55:59		init done
+2024-05-30/22:56:01		init done
+2024-05-30/22:56:01		data processed to str
+2024-05-30/22:56:01		updated data to session from doc string
+2024-05-30/22:56:01		starting editor
+2024-05-30/22:56:01		returning editor new content
+2024-05-30/22:56:01		Saving userdata
+2024-05-30/22:56:01		file saved
+2024-05-30/22:56:01		user edited data saved. no extracting data
+2024-05-30/22:56:01		init done
+2024-05-30/22:56:01		starting editor
+2024-05-30/22:56:01		returning editor new content
+2024-05-30/22:56:01		Saving userdata
+2024-05-30/22:56:01		file saved
+2024-05-30/22:56:01		user edited data saved. no extracting data
+2024-05-30/22:56:02		file saved
+2024-05-30/22:56:02		data extracted and appended to the original userdata
+2024-05-30/22:56:04		init done
+2024-05-30/22:56:04		starting editor
+2024-05-30/22:56:04		returning editor new content
+2024-05-30/22:56:04		Saving userdata
+2024-05-30/22:56:04		file saved
+2024-05-30/22:56:04		user edited data saved. no extracting data
+2024-05-30/22:56:04		file saved
+2024-05-30/22:56:04		data extracted and appended to the original userdata
+2024-05-30/22:56:07		init done
+2024-05-30/22:56:07		starting editor
+2024-05-30/22:56:07		returning editor new content
+2024-05-30/22:56:07		Saving userdata
+2024-05-30/22:56:07		file saved
+2024-05-30/22:56:07		user edited data saved. no extracting data
+2024-05-30/22:56:07		file saved
+2024-05-30/22:56:07		data extracted and appended to the original userdata
+2024-05-30/22:56:10		init done
+2024-05-30/22:56:10		starting editor
+2024-05-30/22:56:10		returning editor new content
+2024-05-30/22:56:10		Saving userdata
+2024-05-30/22:56:10		file saved
+2024-05-30/22:56:10		user edited data saved. no extracting data
+2024-05-30/22:56:10		file saved
+2024-05-30/22:56:10		data extracted and appended to the original userdata
+2024-05-30/22:58:07		init done
+2024-05-30/22:58:07		starting editor
+2024-05-30/22:58:07		returning editor new content
+2024-05-30/22:58:11		init done
+2024-05-30/22:58:11		starting editor
+2024-05-30/22:58:11		returning editor new content
+2024-05-30/22:58:11		Saving userdata
+2024-05-30/22:58:11		file saved
+2024-05-30/22:58:11		user edited data saved. no extracting data
+2024-05-30/22:58:11		file saved
+2024-05-30/22:58:11		data extracted and appended to the original userdata
+2024-05-30/22:58:12		init done
+2024-05-30/22:58:12		starting editor
+2024-05-30/22:58:12		returning editor new content
+2024-05-30/22:58:14		init done
+2024-05-30/22:58:14		starting editor
+2024-05-30/22:58:14		returning editor new content
+2024-05-30/22:58:14		Saving userdata
+2024-05-30/22:58:14		file saved
+2024-05-30/22:58:14		user edited data saved. no extracting data
+2024-05-30/22:58:14		file saved
+2024-05-30/22:58:14		data extracted and appended to the original userdata
+2024-05-30/22:58:14		init done
+2024-05-30/22:58:14		starting editor
+2024-05-30/22:58:14		returning editor new content
+2024-05-30/22:58:16		init done
+2024-05-30/22:58:16		starting editor
+2024-05-30/22:58:16		returning editor new content
+2024-05-30/22:58:16		Saving userdata
+2024-05-30/22:58:16		file saved
+2024-05-30/22:58:16		user edited data saved. no extracting data
+2024-05-30/22:58:16		file saved
+2024-05-30/22:58:16		data extracted and appended to the original userdata
+2024-05-30/22:58:11		starting preprocessing
+2024-05-30/22:58:11		trying to load eng stopwords from model
+2024-05-30/22:58:11		trying loading wordlemma
+2024-05-30/22:58:11		lemmatize words preprocessing done
+2024-05-30/22:58:11		starting preprocessing
+2024-05-30/22:58:11		trying to load eng stopwords from model
+2024-05-30/22:58:11		trying loading wordlemma
+2024-05-30/22:58:11		lemmatize words preprocessing done
+2024-05-30/22:58:11		text rank done
+2024-05-30/22:58:11		data cleaned and returned
+2024-05-30/22:58:14		starting preprocessing
+2024-05-30/22:58:14		trying to load eng stopwords from model
+2024-05-30/22:58:14		trying loading wordlemma
+2024-05-30/22:58:14		lemmatize words preprocessing done
+2024-05-30/22:58:14		starting preprocessing
+2024-05-30/22:58:14		trying to load eng stopwords from model
+2024-05-30/22:58:14		trying loading wordlemma
+2024-05-30/22:58:14		lemmatize words preprocessing done
+2024-05-30/22:58:14		text rank done
+2024-05-30/22:58:14		data cleaned and returned
+2024-05-30/22:58:16		starting preprocessing
+2024-05-30/22:58:16		trying to load eng stopwords from model
+2024-05-30/22:58:16		trying loading wordlemma
+2024-05-30/22:58:16		lemmatize words preprocessing done
+2024-05-30/22:58:16		starting preprocessing
+2024-05-30/22:58:16		trying to load eng stopwords from model
+2024-05-30/22:58:16		trying loading wordlemma
+2024-05-30/22:58:16		lemmatize words preprocessing done
+2024-05-30/22:58:16		text rank done
+2024-05-30/22:58:16		data cleaned and returned
+2024-05-30/22:58:17		init done
+2024-05-30/22:58:17		starting editor
+2024-05-30/22:58:17		returning editor new content
+2024-05-30/22:58:30		init done
+2024-05-30/22:58:30		starting editor
+2024-05-30/22:58:30		returning editor new content
+2024-05-30/22:58:30		Saving userdata
+2024-05-30/22:58:30		file saved
+2024-05-30/22:58:30		user edited data saved. no extracting data
+2024-05-30/22:58:30		file saved
+2024-05-30/22:58:30		data extracted and appended to the original userdata
+2024-05-30/22:58:33		init done
+2024-05-30/22:58:33		starting editor
+2024-05-30/22:58:33		returning editor new content
+2024-05-30/22:58:33		Saving userdata
+2024-05-30/22:58:33		file saved
+2024-05-30/22:58:33		user edited data saved. no extracting data
+2024-05-30/22:58:33		file saved
+2024-05-30/22:58:33		data extracted and appended to the original userdata
+2024-05-30/22:58:30		starting preprocessing
+2024-05-30/22:58:30		trying to load eng stopwords from model
+2024-05-30/22:58:30		trying loading wordlemma
+2024-05-30/22:58:30		lemmatize words preprocessing done
+2024-05-30/22:58:30		starting preprocessing
+2024-05-30/22:58:30		trying to load eng stopwords from model
+2024-05-30/22:58:30		trying loading wordlemma
+2024-05-30/22:58:30		lemmatize words preprocessing done
+2024-05-30/22:58:30		text rank done
+2024-05-30/22:58:30		data cleaned and returned
+2024-05-30/22:58:33		starting preprocessing
+2024-05-30/22:58:33		trying to load eng stopwords from model
+2024-05-30/22:58:33		trying loading wordlemma
+2024-05-30/22:58:33		lemmatize words preprocessing done
+2024-05-30/22:58:33		starting preprocessing
+2024-05-30/22:58:33		trying to load eng stopwords from model
+2024-05-30/22:58:33		trying loading wordlemma
+2024-05-30/22:58:33		lemmatize words preprocessing done
+2024-05-30/22:58:33		text rank done
+2024-05-30/22:58:33		data cleaned and returned
+2024-05-30/22:58:34		starting preprocessing
+2024-05-30/22:58:34		trying to load eng stopwords from model
+2024-05-30/22:58:34		trying loading wordlemma
+2024-05-30/22:58:34		lemmatize words preprocessing done
+2024-05-30/22:58:34		starting preprocessing
+2024-05-30/22:58:34		trying to load eng stopwords from model
+2024-05-30/22:58:34		trying loading wordlemma
+2024-05-30/22:58:34		lemmatize words preprocessing done
+2024-05-30/22:58:34		text rank done
+2024-05-30/22:58:34		data cleaned and returned
+2024-05-30/22:58:34		PDF File saved
+2024-05-30/22:58:34		init done
+2024-05-30/22:58:34		starting editor
+2024-05-30/22:58:34		returning editor new content
+2024-05-30/22:58:34		Saving userdata
+2024-05-30/22:58:34		file saved
+2024-05-30/22:58:34		user edited data saved. no extracting data
+2024-05-30/22:58:34		file saved
+2024-05-30/22:58:34		data extracted and appended to the original userdata
+2024-05-30/23:00:38		init done
+2024-05-30/23:00:38		starting editor
+2024-05-30/23:00:38		returning editor new content
+2024-05-30/23:00:38		Saving userdata
+2024-05-30/23:00:38		file saved
+2024-05-30/23:00:38		user edited data saved. no extracting data
+2024-05-30/23:00:39		file saved
+2024-05-30/23:00:39		data extracted and appended to the original userdata
+2024-05-30/23:00:38		starting preprocessing
+2024-05-30/23:00:38		trying to load eng stopwords from model
+2024-05-30/23:00:38		trying loading wordlemma
+2024-05-30/23:00:38		lemmatize words preprocessing done
+2024-05-30/23:00:39		starting preprocessing
+2024-05-30/23:00:39		trying to load eng stopwords from model
+2024-05-30/23:00:39		trying loading wordlemma
+2024-05-30/23:00:39		lemmatize words preprocessing done
+2024-05-30/23:00:39		text rank done
+2024-05-30/23:00:39		data cleaned and returned
+2024-05-30/23:00:39		PDF File saved
+2024-05-30/23:00:44		starting preprocessing
+2024-05-30/23:00:44		trying to load eng stopwords from model
+2024-05-30/23:00:44		trying loading wordlemma
+2024-05-30/23:00:44		lemmatize words preprocessing done
+2024-05-30/23:00:44		starting preprocessing
+2024-05-30/23:00:44		trying to load eng stopwords from model
+2024-05-30/23:00:44		trying loading wordlemma
+2024-05-30/23:00:44		lemmatize words preprocessing done
+2024-05-30/23:00:44		text rank done
+2024-05-30/23:00:44		data cleaned and returned
+2024-05-30/23:00:44		PDF File saved
+2024-05-30/23:00:44		init done
+2024-05-30/23:00:44		starting editor
+2024-05-30/23:00:44		returning editor new content
+2024-05-30/23:00:44		Saving userdata
+2024-05-30/23:00:44		file saved
+2024-05-30/23:00:44		user edited data saved. no extracting data
+2024-05-30/23:00:44		file saved
+2024-05-30/23:00:44		data extracted and appended to the original userdata
+2024-05-30/23:01:09		init done
+2024-05-30/23:01:09		starting editor
+2024-05-30/23:01:09		returning editor new content
+2024-05-30/23:01:09		Saving userdata
+2024-05-30/23:01:09		file saved
+2024-05-30/23:01:09		user edited data saved. no extracting data
+2024-05-30/23:01:09		file saved
+2024-05-30/23:01:09		data extracted and appended to the original userdata
+2024-05-30/23:01:09		starting preprocessing
+2024-05-30/23:01:09		trying to load eng stopwords from model
+2024-05-30/23:01:09		trying loading wordlemma
+2024-05-30/23:01:09		lemmatize words preprocessing done
+2024-05-30/23:01:09		starting preprocessing
+2024-05-30/23:01:09		trying to load eng stopwords from model
+2024-05-30/23:01:09		trying loading wordlemma
+2024-05-30/23:01:09		lemmatize words preprocessing done
+2024-05-30/23:01:09		text rank done
+2024-05-30/23:01:09		data cleaned and returned
+2024-05-30/23:01:09		PDF File saved
+2024-05-30/23:01:11		starting preprocessing
+2024-05-30/23:01:11		trying to load eng stopwords from model
+2024-05-30/23:01:11		trying loading wordlemma
+2024-05-30/23:01:11		lemmatize words preprocessing done
+2024-05-30/23:01:11		starting preprocessing
+2024-05-30/23:01:11		trying to load eng stopwords from model
+2024-05-30/23:01:11		trying loading wordlemma
+2024-05-30/23:01:11		lemmatize words preprocessing done
+2024-05-30/23:01:11		text rank done
+2024-05-30/23:01:11		data cleaned and returned
+2024-05-30/23:01:11		PDF File saved
+2024-05-30/23:01:11		init done
+2024-05-30/23:01:11		starting editor
+2024-05-30/23:01:11		returning editor new content
+2024-05-30/23:01:11		Saving userdata
+2024-05-30/23:01:11		file saved
+2024-05-30/23:01:11		user edited data saved. no extracting data
+2024-05-30/23:01:11		file saved
+2024-05-30/23:01:11		data extracted and appended to the original userdata
+2024-05-30/23:02:08		init done
+2024-05-30/23:02:08		starting editor
+2024-05-30/23:02:08		returning editor new content
+2024-05-30/23:02:08		Saving userdata
+2024-05-30/23:02:08		file saved
+2024-05-30/23:02:08		user edited data saved. no extracting data
+2024-05-30/23:02:08		file saved
+2024-05-30/23:02:08		data extracted and appended to the original userdata
+2024-05-30/23:02:08		starting preprocessing
+2024-05-30/23:02:08		trying to load eng stopwords from model
+2024-05-30/23:02:08		trying loading wordlemma
+2024-05-30/23:02:08		lemmatize words preprocessing done
+2024-05-30/23:02:08		starting preprocessing
+2024-05-30/23:02:08		trying to load eng stopwords from model
+2024-05-30/23:02:08		trying loading wordlemma
+2024-05-30/23:02:08		lemmatize words preprocessing done
+2024-05-30/23:02:08		text rank done
+2024-05-30/23:02:08		data cleaned and returned
+2024-05-30/23:02:08		PDF File saved
+2024-05-30/23:02:10		starting preprocessing
+2024-05-30/23:02:10		trying to load eng stopwords from model
+2024-05-30/23:02:10		trying loading wordlemma
+2024-05-30/23:02:10		lemmatize words preprocessing done
+2024-05-30/23:02:10		starting preprocessing
+2024-05-30/23:02:10		trying to load eng stopwords from model
+2024-05-30/23:02:10		trying loading wordlemma
+2024-05-30/23:02:10		lemmatize words preprocessing done
+2024-05-30/23:02:10		text rank done
+2024-05-30/23:02:10		data cleaned and returned
+2024-05-30/23:02:10		PDF File saved
+2024-05-30/23:02:10		init done
+2024-05-30/23:02:10		starting editor
+2024-05-30/23:02:10		returning editor new content
+2024-05-30/23:02:10		Saving userdata
+2024-05-30/23:02:10		file saved
+2024-05-30/23:02:10		user edited data saved. no extracting data
+2024-05-30/23:02:10		file saved
+2024-05-30/23:02:10		data extracted and appended to the original userdata
+2024-05-30/23:07:50		init done
+2024-05-30/23:07:50		starting editor
+2024-05-30/23:07:50		returning editor new content
+2024-05-30/23:07:50		Saving userdata
+2024-05-30/23:07:50		file saved
+2024-05-30/23:07:50		user edited data saved. no extracting data
+2024-05-30/23:07:50		file saved
+2024-05-30/23:07:50		data extracted and appended to the original userdata
+2024-05-30/23:07:50		starting preprocessing
+2024-05-30/23:07:50		trying to load eng stopwords from model
+2024-05-30/23:07:50		trying loading wordlemma
+2024-05-30/23:07:50		lemmatize words preprocessing done
+2024-05-30/23:07:50		starting preprocessing
+2024-05-30/23:07:50		trying to load eng stopwords from model
+2024-05-30/23:07:50		trying loading wordlemma
+2024-05-30/23:07:50		lemmatize words preprocessing done
+2024-05-30/23:07:50		text rank done
+2024-05-30/23:07:50		data cleaned and returned
+2024-05-30/23:07:50		PDF File saved
+2024-05-30/23:07:52		starting preprocessing
+2024-05-30/23:07:52		trying to load eng stopwords from model
+2024-05-30/23:07:52		trying loading wordlemma
+2024-05-30/23:07:52		lemmatize words preprocessing done
+2024-05-30/23:07:52		starting preprocessing
+2024-05-30/23:07:52		trying to load eng stopwords from model
+2024-05-30/23:07:52		trying loading wordlemma
+2024-05-30/23:07:52		lemmatize words preprocessing done
+2024-05-30/23:07:52		text rank done
+2024-05-30/23:07:52		data cleaned and returned
+2024-05-30/23:07:52		PDF File saved
+2024-05-30/23:07:52		init done
+2024-05-30/23:07:52		starting editor
+2024-05-30/23:07:52		returning editor new content
+2024-05-30/23:07:52		Saving userdata
+2024-05-30/23:07:52		file saved
+2024-05-30/23:07:52		user edited data saved. no extracting data
+2024-05-30/23:07:52		file saved
+2024-05-30/23:07:52		data extracted and appended to the original userdata
+2024-05-30/23:08:28		init done
+2024-05-30/23:08:34		init done
+2024-05-30/23:08:35		init done
+2024-05-30/23:08:35		data processed to str
+2024-05-30/23:08:35		updated data to session from doc string
+2024-05-30/23:08:35		starting editor
+2024-05-30/23:08:35		returning editor new content
+2024-05-30/23:08:35		Saving userdata
+2024-05-30/23:08:35		file saved
+2024-05-30/23:08:35		user edited data saved. no extracting data
+2024-05-30/23:08:35		file saved
+2024-05-30/23:08:35		data extracted and appended to the original userdata
+2024-05-30/23:08:36		init done
+2024-05-30/23:08:36		starting editor
+2024-05-30/23:08:36		returning editor new content
+2024-05-30/23:08:36		Saving userdata
+2024-05-30/23:08:36		file saved
+2024-05-30/23:08:36		user edited data saved. no extracting data
+2024-05-30/23:08:36		file saved
+2024-05-30/23:08:36		data extracted and appended to the original userdata
+2024-05-30/23:08:39		init done
+2024-05-30/23:08:39		starting editor
+2024-05-30/23:08:39		returning editor new content
+2024-05-30/23:08:39		Saving userdata
+2024-05-30/23:08:39		file saved
+2024-05-30/23:08:39		user edited data saved. no extracting data
+2024-05-30/23:08:39		file saved
+2024-05-30/23:08:39		data extracted and appended to the original userdata
+2024-05-30/23:08:35		starting preprocessing
+2024-05-30/23:08:35		trying to load eng stopwords from model
+2024-05-30/23:08:35		trying loading wordlemma
+2024-05-30/23:08:35		lemmatize words preprocessing done
+2024-05-30/23:08:35		starting preprocessing
+2024-05-30/23:08:35		trying to load eng stopwords from model
+2024-05-30/23:08:35		trying loading wordlemma
+2024-05-30/23:08:35		lemmatize words preprocessing done
+2024-05-30/23:08:35		text rank done
+2024-05-30/23:08:35		data cleaned and returned
+2024-05-30/23:08:36		starting preprocessing
+2024-05-30/23:08:36		trying to load eng stopwords from model
+2024-05-30/23:08:36		trying loading wordlemma
+2024-05-30/23:08:36		lemmatize words preprocessing done
+2024-05-30/23:08:36		starting preprocessing
+2024-05-30/23:08:36		trying to load eng stopwords from model
+2024-05-30/23:08:36		trying loading wordlemma
+2024-05-30/23:08:36		lemmatize words preprocessing done
+2024-05-30/23:08:36		text rank done
+2024-05-30/23:08:36		data cleaned and returned
+2024-05-30/23:08:39		starting preprocessing
+2024-05-30/23:08:39		trying to load eng stopwords from model
+2024-05-30/23:08:39		trying loading wordlemma
+2024-05-30/23:08:39		lemmatize words preprocessing done
+2024-05-30/23:08:39		starting preprocessing
+2024-05-30/23:08:39		trying to load eng stopwords from model
+2024-05-30/23:08:39		trying loading wordlemma
+2024-05-30/23:08:39		lemmatize words preprocessing done
+2024-05-30/23:08:39		text rank done
+2024-05-30/23:08:39		data cleaned and returned
+2024-05-30/23:08:39		PDF File saved
+2024-05-30/23:08:41		starting preprocessing
+2024-05-30/23:08:41		trying to load eng stopwords from model
+2024-05-30/23:08:41		trying loading wordlemma
+2024-05-30/23:08:41		lemmatize words preprocessing done
+2024-05-30/23:08:41		starting preprocessing
+2024-05-30/23:08:41		trying to load eng stopwords from model
+2024-05-30/23:08:41		trying loading wordlemma
+2024-05-30/23:08:41		lemmatize words preprocessing done
+2024-05-30/23:08:41		text rank done
+2024-05-30/23:08:41		data cleaned and returned
+2024-05-30/23:08:41		PDF File saved
+2024-05-30/23:08:41		init done
+2024-05-30/23:08:41		starting editor
+2024-05-30/23:08:41		returning editor new content
+2024-05-30/23:08:41		Saving userdata
+2024-05-30/23:08:41		file saved
+2024-05-30/23:08:41		user edited data saved. no extracting data
+2024-05-30/23:08:41		file saved
+2024-05-30/23:08:41		data extracted and appended to the original userdata
+2024-05-30/23:09:17		init done
+2024-05-30/23:09:17		starting editor
+2024-05-30/23:09:17		returning editor new content
+2024-05-30/23:09:17		Saving userdata
+2024-05-30/23:09:17		file saved
+2024-05-30/23:09:17		user edited data saved. no extracting data
+2024-05-30/23:09:18		file saved
+2024-05-30/23:09:18		data extracted and appended to the original userdata
+2024-05-30/23:09:17		starting preprocessing
+2024-05-30/23:09:17		trying to load eng stopwords from model
+2024-05-30/23:09:17		trying loading wordlemma
+2024-05-30/23:09:17		lemmatize words preprocessing done
+2024-05-30/23:09:18		starting preprocessing
+2024-05-30/23:09:18		trying to load eng stopwords from model
+2024-05-30/23:09:18		trying loading wordlemma
+2024-05-30/23:09:18		lemmatize words preprocessing done
+2024-05-30/23:09:18		text rank done
+2024-05-30/23:09:18		data cleaned and returned
+2024-05-30/23:09:18		PDF File saved
+2024-05-30/23:09:19		starting preprocessing
+2024-05-30/23:09:19		trying to load eng stopwords from model
+2024-05-30/23:09:19		trying loading wordlemma
+2024-05-30/23:09:19		lemmatize words preprocessing done
+2024-05-30/23:09:19		starting preprocessing
+2024-05-30/23:09:19		trying to load eng stopwords from model
+2024-05-30/23:09:19		trying loading wordlemma
+2024-05-30/23:09:19		lemmatize words preprocessing done
+2024-05-30/23:09:19		text rank done
+2024-05-30/23:09:19		data cleaned and returned
+2024-05-30/23:09:19		PDF File saved
+2024-05-30/23:09:19		init done
+2024-05-30/23:09:19		starting editor
+2024-05-30/23:09:19		returning editor new content
+2024-05-30/23:09:19		Saving userdata
+2024-05-30/23:09:19		file saved
+2024-05-30/23:09:19		user edited data saved. no extracting data
+2024-05-30/23:09:19		file saved
+2024-05-30/23:09:19		data extracted and appended to the original userdata
+2024-05-30/23:10:17		init done
+2024-05-30/23:10:17		starting editor
+2024-05-30/23:10:17		returning editor new content
+2024-05-30/23:10:17		Saving userdata
+2024-05-30/23:10:17		file saved
+2024-05-30/23:10:17		user edited data saved. no extracting data
+2024-05-30/23:10:17		file saved
+2024-05-30/23:10:17		data extracted and appended to the original userdata
+2024-05-30/23:10:17		starting preprocessing
+2024-05-30/23:10:17		trying to load eng stopwords from model
+2024-05-30/23:10:17		trying loading wordlemma
+2024-05-30/23:10:17		lemmatize words preprocessing done
+2024-05-30/23:10:17		starting preprocessing
+2024-05-30/23:10:17		trying to load eng stopwords from model
+2024-05-30/23:10:17		trying loading wordlemma
+2024-05-30/23:10:17		lemmatize words preprocessing done
+2024-05-30/23:10:17		text rank done
+2024-05-30/23:10:17		data cleaned and returned
+2024-05-30/23:10:17		PDF File saved
+2024-05-30/23:10:18		starting preprocessing
+2024-05-30/23:10:18		trying to load eng stopwords from model
+2024-05-30/23:10:18		trying loading wordlemma
+2024-05-30/23:10:18		lemmatize words preprocessing done
+2024-05-30/23:10:18		starting preprocessing
+2024-05-30/23:10:18		trying to load eng stopwords from model
+2024-05-30/23:10:18		trying loading wordlemma
+2024-05-30/23:10:18		lemmatize words preprocessing done
+2024-05-30/23:10:18		text rank done
+2024-05-30/23:10:18		data cleaned and returned
+2024-05-30/23:10:18		PDF File saved
+2024-05-30/23:10:18		init done
+2024-05-30/23:10:18		starting editor
+2024-05-30/23:10:18		returning editor new content
+2024-05-30/23:10:18		Saving userdata
+2024-05-30/23:10:18		file saved
+2024-05-30/23:10:18		user edited data saved. no extracting data
+2024-05-30/23:10:18		file saved
+2024-05-30/23:10:18		data extracted and appended to the original userdata
+2024-05-30/23:13:50		starting preprocessing
+2024-05-30/23:13:50		trying to load eng stopwords from model
+2024-05-30/23:13:50		trying loading wordlemma
+2024-05-30/23:13:50		lemmatize words preprocessing done
+2024-05-30/23:13:50		starting preprocessing
+2024-05-30/23:13:50		trying to load eng stopwords from model
+2024-05-30/23:13:50		trying loading wordlemma
+2024-05-30/23:13:50		lemmatize words preprocessing done
+2024-05-30/23:13:50		text rank done
+2024-05-30/23:13:50		data cleaned and returned
+2024-05-30/23:13:50		init done
+2024-05-30/23:13:50		starting editor
+2024-05-30/23:13:50		returning editor new content
+2024-05-30/23:13:50		Saving userdata
+2024-05-30/23:13:50		file saved
+2024-05-30/23:13:50		user edited data saved. no extracting data
+2024-05-30/23:13:50		file saved
+2024-05-30/23:13:50		data extracted and appended to the original userdata
+2024-05-30/23:14:45		init done
+2024-05-30/23:14:45		starting editor
+2024-05-30/23:14:45		returning editor new content
+2024-05-30/23:14:45		Saving userdata
+2024-05-30/23:14:45		file saved
+2024-05-30/23:14:45		user edited data saved. no extracting data
+2024-05-30/23:14:45		file saved
+2024-05-30/23:14:45		data extracted and appended to the original userdata
+2024-05-30/23:14:45		starting preprocessing
+2024-05-30/23:14:45		trying to load eng stopwords from model
+2024-05-30/23:14:45		trying loading wordlemma
+2024-05-30/23:14:45		lemmatize words preprocessing done
+2024-05-30/23:14:45		starting preprocessing
+2024-05-30/23:14:45		trying to load eng stopwords from model
+2024-05-30/23:14:45		trying loading wordlemma
+2024-05-30/23:14:45		lemmatize words preprocessing done
+2024-05-30/23:14:45		text rank done
+2024-05-30/23:14:45		data cleaned and returned
+2024-05-30/23:14:45		PDF File saved
+2024-05-30/23:14:47		starting preprocessing
+2024-05-30/23:14:47		trying to load eng stopwords from model
+2024-05-30/23:14:47		trying loading wordlemma
+2024-05-30/23:14:47		lemmatize words preprocessing done
+2024-05-30/23:14:47		starting preprocessing
+2024-05-30/23:14:47		trying to load eng stopwords from model
+2024-05-30/23:14:47		trying loading wordlemma
+2024-05-30/23:14:47		lemmatize words preprocessing done
+2024-05-30/23:14:47		text rank done
+2024-05-30/23:14:47		data cleaned and returned
+2024-05-30/23:14:47		PDF File saved
+2024-05-30/23:14:47		init done
+2024-05-30/23:14:47		starting editor
+2024-05-30/23:14:47		returning editor new content
+2024-05-30/23:14:47		Saving userdata
+2024-05-30/23:14:47		file saved
+2024-05-30/23:14:47		user edited data saved. no extracting data
+2024-05-30/23:14:47		file saved
+2024-05-30/23:14:47		data extracted and appended to the original userdata
+2024-05-30/23:16:19		starting preprocessing
+2024-05-30/23:16:19		trying to load eng stopwords from model
+2024-05-30/23:16:19		trying loading wordlemma
+2024-05-30/23:16:19		lemmatize words preprocessing done
+2024-05-30/23:16:19		starting preprocessing
+2024-05-30/23:16:19		trying to load eng stopwords from model
+2024-05-30/23:16:19		trying loading wordlemma
+2024-05-30/23:16:19		lemmatize words preprocessing done
+2024-05-30/23:16:19		text rank done
+2024-05-30/23:16:19		data cleaned and returned
+2024-05-30/23:16:19		PDF File saved
+2024-05-30/23:16:19		init done
+2024-05-30/23:16:19		starting editor
+2024-05-30/23:16:19		returning editor new content
+2024-05-30/23:16:19		Saving userdata
+2024-05-30/23:16:19		file saved
+2024-05-30/23:16:19		user edited data saved. no extracting data
+2024-05-30/23:16:19		file saved
+2024-05-30/23:16:19		data extracted and appended to the original userdata
+2024-05-30/23:18:40		init done
+2024-05-30/23:18:40		starting editor
+2024-05-30/23:18:40		returning editor new content
+2024-05-30/23:18:40		Saving userdata
+2024-05-30/23:18:40		file saved
+2024-05-30/23:18:40		user edited data saved. no extracting data
+2024-05-30/23:18:40		file saved
+2024-05-30/23:18:40		data extracted and appended to the original userdata
+2024-05-30/23:18:41		init done
+2024-05-30/23:18:41		starting editor
+2024-05-30/23:18:41		returning editor new content
+2024-05-30/23:18:41		Saving userdata
+2024-05-30/23:18:41		file saved
+2024-05-30/23:18:41		user edited data saved. no extracting data
+2024-05-30/23:18:41		file saved
+2024-05-30/23:18:41		data extracted and appended to the original userdata
+2024-05-30/23:18:40		starting preprocessing
+2024-05-30/23:18:40		trying to load eng stopwords from model
+2024-05-30/23:18:40		trying loading wordlemma
+2024-05-30/23:18:40		lemmatize words preprocessing done
+2024-05-30/23:18:40		starting preprocessing
+2024-05-30/23:18:40		trying to load eng stopwords from model
+2024-05-30/23:18:40		trying loading wordlemma
+2024-05-30/23:18:40		lemmatize words preprocessing done
+2024-05-30/23:18:40		text rank done
+2024-05-30/23:18:40		data cleaned and returned
+2024-05-30/23:18:41		starting preprocessing
+2024-05-30/23:18:41		trying to load eng stopwords from model
+2024-05-30/23:18:41		trying loading wordlemma
+2024-05-30/23:18:41		lemmatize words preprocessing done
+2024-05-30/23:18:41		starting preprocessing
+2024-05-30/23:18:41		trying to load eng stopwords from model
+2024-05-30/23:18:41		trying loading wordlemma
+2024-05-30/23:18:41		lemmatize words preprocessing done
+2024-05-30/23:18:41		text rank done
+2024-05-30/23:18:41		data cleaned and returned
+2024-05-30/23:33:44		starting preprocessing
+2024-05-30/23:33:44		trying to load eng stopwords from model
+2024-05-30/23:33:44		trying loading wordlemma
+2024-05-30/23:33:44		lemmatize words preprocessing done
+2024-05-30/23:33:44		starting preprocessing
+2024-05-30/23:33:44		trying to load eng stopwords from model
+2024-05-30/23:33:44		trying loading wordlemma
+2024-05-30/23:33:44		lemmatize words preprocessing done
+2024-05-30/23:33:44		text rank done
+2024-05-30/23:33:44		data cleaned and returned
+2024-05-30/23:33:44		init done
+2024-05-30/23:33:44		starting editor
+2024-05-30/23:33:44		returning editor new content
+2024-05-30/23:33:44		Saving userdata
+2024-05-30/23:33:44		file saved
+2024-05-30/23:33:44		user edited data saved. no extracting data
+2024-05-30/23:33:44		file saved
+2024-05-30/23:33:44		data extracted and appended to the original userdata
+2024-05-30/22:56:01		starting preprocessing
+2024-05-30/22:56:01		trying to load eng stopwords from model
+2024-05-30/22:56:01		trying loading wordlemma
+2024-05-30/22:56:01		starting preprocessing
+2024-05-30/22:56:01		trying to load eng stopwords from model
+2024-05-30/22:56:01		trying loading wordlemma
+2024-05-30/22:56:01		lemmatize words preprocessing done
+2024-05-30/22:56:01		starting preprocessing
+2024-05-30/22:56:01		trying to load eng stopwords from model
+2024-05-30/22:56:01		trying loading wordlemma
+2024-05-30/22:56:01		lemmatize words preprocessing done
+2024-05-30/22:56:02		text rank done
+2024-05-30/22:56:02		data cleaned and returned
+2024-05-30/22:56:02		loading failed trying to download wordnetm and omw 1.4
+2024-05-30/22:56:02		lemmatize words preprocessing done
+2024-05-30/22:56:02		starting preprocessing
+2024-05-30/22:56:02		trying to load eng stopwords from model
+2024-05-30/22:56:02		trying loading wordlemma
+2024-05-30/22:56:02		lemmatize words preprocessing done
+2024-05-30/22:56:02		text rank done
+2024-05-30/22:56:02		data cleaned and returned
+2024-05-30/22:56:04		starting preprocessing
+2024-05-30/22:56:04		trying to load eng stopwords from model
+2024-05-30/22:56:04		trying loading wordlemma
+2024-05-30/22:56:04		lemmatize words preprocessing done
+2024-05-30/22:56:04		starting preprocessing
+2024-05-30/22:56:04		trying to load eng stopwords from model
+2024-05-30/22:56:04		trying loading wordlemma
+2024-05-30/22:56:04		lemmatize words preprocessing done
+2024-05-30/22:56:04		text rank done
+2024-05-30/22:56:04		data cleaned and returned
+2024-05-30/22:56:04		PDF File saved
+2024-05-30/22:56:07		starting preprocessing
+2024-05-30/22:56:07		trying to load eng stopwords from model
+2024-05-30/22:56:07		trying loading wordlemma
+2024-05-30/22:56:07		lemmatize words preprocessing done
+2024-05-30/22:56:07		starting preprocessing
+2024-05-30/22:56:07		trying to load eng stopwords from model
+2024-05-30/22:56:07		trying loading wordlemma
+2024-05-30/22:56:07		lemmatize words preprocessing done
+2024-05-30/22:56:07		text rank done
+2024-05-30/22:56:07		data cleaned and returned
+2024-05-30/22:56:07		PDF File saved
+2024-05-30/22:56:10		starting preprocessing
+2024-05-30/22:56:10		trying to load eng stopwords from model
+2024-05-30/22:56:10		trying loading wordlemma
+2024-05-30/22:56:10		lemmatize words preprocessing done
+2024-05-30/22:56:10		starting preprocessing
+2024-05-30/22:56:10		trying to load eng stopwords from model
+2024-05-30/22:56:10		trying loading wordlemma
+2024-05-30/22:56:10		lemmatize words preprocessing done
+2024-05-30/22:56:10		text rank done
+2024-05-30/22:56:10		data cleaned and returned
+2024-05-30/22:56:10		PDF File saved
+2024-05-31/13:26:47		init done
+2024-05-31/14:57:05		init done
+2024-05-31/15:30:17		init done
+2024-05-31/15:30:25		init done
+2024-05-31/15:30:28		init done
+2024-05-31/15:30:28		data processed to str
+2024-05-31/15:30:28		updated data to session from doc string
+2024-05-31/15:30:28		starting editor
+2024-05-31/15:30:28		returning editor new content
+2024-05-31/15:30:28		Saving userdata
+2024-05-31/15:30:28		file saved
+2024-05-31/15:30:28		user edited data saved. no extracting data
+2024-05-31/15:30:29		init done
+2024-05-31/15:30:29		starting editor
+2024-05-31/15:30:29		returning editor new content
+2024-05-31/15:30:29		Saving userdata
+2024-05-31/15:30:29		file saved
+2024-05-31/15:30:29		user edited data saved. no extracting data
+2024-05-31/15:30:29		file saved
+2024-05-31/15:30:29		data extracted and appended to the original userdata
+2024-05-31/15:30:28		starting preprocessing
+2024-05-31/15:30:28		trying to load eng stopwords from model
+2024-05-31/15:30:28		trying loading wordlemma
+2024-05-31/15:30:28		lemmatize words preprocessing done
+2024-05-31/15:30:28		starting preprocessing
+2024-05-31/15:30:28		trying to load eng stopwords from model
+2024-05-31/15:30:28		trying loading wordlemma
+2024-05-31/15:30:28		lemmatize words preprocessing done
+2024-05-31/15:30:28		text rank done
+2024-05-31/15:30:28		data cleaned and returned
+2024-05-31/15:30:29		starting preprocessing
+2024-05-31/15:30:29		trying to load eng stopwords from model
+2024-05-31/15:30:29		trying loading wordlemma
+2024-05-31/15:30:29		lemmatize words preprocessing done
+2024-05-31/15:30:29		starting preprocessing
+2024-05-31/15:30:29		trying to load eng stopwords from model
+2024-05-31/15:30:29		trying loading wordlemma
+2024-05-31/15:30:29		lemmatize words preprocessing done
+2024-05-31/15:30:29		text rank done
+2024-05-31/15:30:29		data cleaned and returned
+2024-05-31/15:30:34		starting preprocessing
+2024-05-31/15:30:34		trying to load eng stopwords from model
+2024-05-31/15:30:34		trying loading wordlemma
+2024-05-31/15:30:34		lemmatize words preprocessing done
+2024-05-31/15:30:34		starting preprocessing
+2024-05-31/15:30:34		trying to load eng stopwords from model
+2024-05-31/15:30:34		trying loading wordlemma
+2024-05-31/15:30:34		lemmatize words preprocessing done
+2024-05-31/15:30:34		text rank done
+2024-05-31/15:30:34		data cleaned and returned
+2024-05-31/15:30:34		PDF File saved
+2024-05-31/15:30:34		init done
+2024-05-31/15:30:34		starting editor
+2024-05-31/15:30:34		returning editor new content
+2024-05-31/15:30:34		Saving userdata
+2024-05-31/15:30:34		file saved
+2024-05-31/15:30:34		user edited data saved. no extracting data
+2024-05-31/15:30:34		file saved
+2024-05-31/15:30:34		data extracted and appended to the original userdata
+2024-05-31/17:25:12		init done
+2024-05-31/17:25:19		init done
+2024-05-31/17:25:21		init done
+2024-05-31/17:25:21		data processed to str
+2024-05-31/17:25:21		updated data to session from doc string
+2024-05-31/17:25:21		starting editor
+2024-05-31/17:25:21		returning editor new content
+2024-05-31/17:25:21		Saving userdata
+2024-05-31/17:25:21		file saved
+2024-05-31/17:25:21		user edited data saved. no extracting data
+2024-05-31/17:25:21		init done
+2024-05-31/17:25:21		starting editor
+2024-05-31/17:25:21		returning editor new content
+2024-05-31/17:25:21		Saving userdata
+2024-05-31/17:25:21		file saved
+2024-05-31/17:25:21		user edited data saved. no extracting data
+2024-05-31/17:25:23		file saved
+2024-05-31/17:25:23		data extracted and appended to the original userdata
+2024-05-31/17:25:21		starting preprocessing
+2024-05-31/17:25:21		trying to load eng stopwords from model
+2024-05-31/17:25:21		trying loading wordlemma
+2024-05-31/17:25:21		starting preprocessing
+2024-05-31/17:25:21		trying to load eng stopwords from model
+2024-05-31/17:25:21		trying loading wordlemma
+2024-05-31/17:25:22		lemmatize words preprocessing done
+2024-05-31/17:25:22		starting preprocessing
+2024-05-31/17:25:22		trying to load eng stopwords from model
+2024-05-31/17:25:22		trying loading wordlemma
+2024-05-31/17:25:22		lemmatize words preprocessing done
+2024-05-31/17:25:22		text rank done
+2024-05-31/17:25:22		data cleaned and returned
+2024-05-31/17:25:22		loading failed trying to download wordnetm and omw 1.4
+2024-05-31/17:25:23		lemmatize words preprocessing done
+2024-05-31/17:25:23		starting preprocessing
+2024-05-31/17:25:23		trying to load eng stopwords from model
+2024-05-31/17:25:23		trying loading wordlemma
+2024-05-31/17:25:23		lemmatize words preprocessing done
+2024-05-31/17:25:23		text rank done
+2024-05-31/17:25:23		data cleaned and returned
+2024-05-31/17:59:53		init done
+2024-05-31/18:00:04		init done
+2024-05-31/18:00:06		init done
+2024-05-31/18:00:06		data processed to str
+2024-05-31/18:00:06		updated data to session from doc string
+2024-05-31/18:00:06		starting editor
+2024-05-31/18:00:06		returning editor new content
+2024-05-31/18:00:06		Saving userdata
+2024-05-31/18:00:06		file saved
+2024-05-31/18:00:06		user edited data saved. no extracting data
+2024-05-31/18:00:07		init done
+2024-05-31/18:00:07		starting editor
+2024-05-31/18:00:07		returning editor new content
+2024-05-31/18:00:07		Saving userdata
+2024-05-31/18:00:07		file saved
+2024-05-31/18:00:07		user edited data saved. no extracting data
+2024-05-31/18:00:08		file saved
+2024-05-31/18:00:08		data extracted and appended to the original userdata
+2024-05-31/18:00:18		init done
+2024-05-31/18:00:18		starting editor
+2024-05-31/18:00:18		returning editor new content
+2024-05-31/18:00:18		Saving userdata
+2024-05-31/18:00:18		file saved
+2024-05-31/18:00:18		user edited data saved. no extracting data
+2024-05-31/18:00:18		file saved
+2024-05-31/18:00:18		data extracted and appended to the original userdata
+2024-05-31/18:00:25		init done
+2024-05-31/18:00:25		starting editor
+2024-05-31/18:00:25		returning editor new content
+2024-05-31/18:00:25		Saving userdata
+2024-05-31/18:00:25		file saved
+2024-05-31/18:00:25		user edited data saved. no extracting data
+2024-05-31/18:00:25		file saved
+2024-05-31/18:00:25		data extracted and appended to the original userdata
+2024-05-31/18:00:27		init done
+2024-05-31/18:00:27		starting editor
+2024-05-31/18:00:27		returning editor new content
+2024-05-31/18:00:27		Saving userdata
+2024-05-31/18:00:27		file saved
+2024-05-31/18:00:27		user edited data saved. no extracting data
+2024-05-31/18:00:27		file saved
+2024-05-31/18:00:27		data extracted and appended to the original userdata
+2024-05-31/18:00:57		init done
+2024-05-31/18:00:57		starting editor
+2024-05-31/18:00:57		returning editor new content
+2024-05-31/18:00:57		Saving userdata
+2024-05-31/18:00:57		file saved
+2024-05-31/18:00:57		user edited data saved. no extracting data
+2024-05-31/18:00:06		starting preprocessing
+2024-05-31/18:00:06		trying to load eng stopwords from model
+2024-05-31/18:00:06		trying loading wordlemma
+2024-05-31/18:00:07		starting preprocessing
+2024-05-31/18:00:07		trying to load eng stopwords from model
+2024-05-31/18:00:07		trying loading wordlemma
+2024-05-31/18:00:07		lemmatize words preprocessing done
+2024-05-31/18:00:07		starting preprocessing
+2024-05-31/18:00:07		trying to load eng stopwords from model
+2024-05-31/18:00:07		trying loading wordlemma
+2024-05-31/18:00:07		lemmatize words preprocessing done
+2024-05-31/18:00:08		text rank done
+2024-05-31/18:00:08		data cleaned and returned
+2024-05-31/18:00:08		loading failed trying to download wordnetm and omw 1.4
+2024-05-31/18:00:08		lemmatize words preprocessing done
+2024-05-31/18:00:08		starting preprocessing
+2024-05-31/18:00:08		trying to load eng stopwords from model
+2024-05-31/18:00:08		trying loading wordlemma
+2024-05-31/18:00:08		lemmatize words preprocessing done
+2024-05-31/18:00:08		text rank done
+2024-05-31/18:00:08		data cleaned and returned
+2024-05-31/18:00:18		starting preprocessing
+2024-05-31/18:00:18		trying to load eng stopwords from model
+2024-05-31/18:00:18		trying loading wordlemma
+2024-05-31/18:00:18		lemmatize words preprocessing done
+2024-05-31/18:00:18		starting preprocessing
+2024-05-31/18:00:18		trying to load eng stopwords from model
+2024-05-31/18:00:18		trying loading wordlemma
+2024-05-31/18:00:18		lemmatize words preprocessing done
+2024-05-31/18:00:18		text rank done
+2024-05-31/18:00:18		data cleaned and returned
+2024-05-31/18:00:25		starting preprocessing
+2024-05-31/18:00:25		trying to load eng stopwords from model
+2024-05-31/18:00:25		trying loading wordlemma
+2024-05-31/18:00:25		lemmatize words preprocessing done
+2024-05-31/18:00:25		starting preprocessing
+2024-05-31/18:00:25		trying to load eng stopwords from model
+2024-05-31/18:00:25		trying loading wordlemma
+2024-05-31/18:00:25		lemmatize words preprocessing done
+2024-05-31/18:00:25		text rank done
+2024-05-31/18:00:25		data cleaned and returned
+2024-05-31/18:00:25		PDF File saved
+2024-05-31/18:00:27		starting preprocessing
+2024-05-31/18:00:27		trying to load eng stopwords from model
+2024-05-31/18:00:27		trying loading wordlemma
+2024-05-31/18:00:27		lemmatize words preprocessing done
+2024-05-31/18:00:27		starting preprocessing
+2024-05-31/18:00:27		trying to load eng stopwords from model
+2024-05-31/18:00:27		trying loading wordlemma
+2024-05-31/18:00:27		lemmatize words preprocessing done
+2024-05-31/18:00:27		text rank done
+2024-05-31/18:00:27		data cleaned and returned
+2024-05-31/18:00:27		PDF File saved
+2024-05-31/18:00:57		starting preprocessing
+2024-05-31/18:00:57		trying to load eng stopwords from model
+2024-05-31/18:00:57		trying loading wordlemma
+2024-05-31/18:00:57		lemmatize words preprocessing done
+2024-05-31/18:00:57		starting preprocessing
+2024-05-31/18:00:57		trying to load eng stopwords from model
+2024-05-31/18:00:57		trying loading wordlemma
+2024-05-31/18:00:57		lemmatize words preprocessing done
+2024-05-31/18:03:12		init done
+2024-05-31/18:03:12		starting editor
+2024-05-31/18:03:12		returning editor new content
+2024-05-31/18:03:12		Saving userdata
+2024-05-31/18:03:12		file saved
+2024-05-31/18:03:12		user edited data saved. no extracting data
+2024-05-31/18:03:13		file saved
+2024-05-31/18:03:13		data extracted and appended to the original userdata
+2024-05-31/18:03:16		init done
+2024-05-31/18:03:16		starting editor
+2024-05-31/18:03:16		returning editor new content
+2024-05-31/18:03:16		Saving userdata
+2024-05-31/18:03:16		file saved
+2024-05-31/18:03:16		user edited data saved. no extracting data
+2024-05-31/18:03:16		file saved
+2024-05-31/18:03:16		data extracted and appended to the original userdata
+2024-05-31/18:03:18		init done
+2024-05-31/18:03:18		starting editor
+2024-05-31/18:03:18		returning editor new content
+2024-05-31/18:03:18		Saving userdata
+2024-05-31/18:03:18		file saved
+2024-05-31/18:03:18		user edited data saved. no extracting data
+2024-05-31/18:03:18		file saved
+2024-05-31/18:03:18		data extracted and appended to the original userdata
+2024-05-31/18:03:19		init done
+2024-05-31/18:03:19		starting editor
+2024-05-31/18:03:19		returning editor new content
+2024-05-31/18:03:19		Saving userdata
+2024-05-31/18:03:19		file saved
+2024-05-31/18:03:19		user edited data saved. no extracting data
+2024-05-31/18:03:19		file saved
+2024-05-31/18:03:19		data extracted and appended to the original userdata
+2024-05-31/18:03:12		starting preprocessing
+2024-05-31/18:03:12		trying to load eng stopwords from model
+2024-05-31/18:03:12		trying loading wordlemma
+2024-05-31/18:03:12		lemmatize words preprocessing done
+2024-05-31/18:03:12		starting preprocessing
+2024-05-31/18:03:12		trying to load eng stopwords from model
+2024-05-31/18:03:12		trying loading wordlemma
+2024-05-31/18:03:12		lemmatize words preprocessing done
+2024-05-31/18:03:13		text rank done
+2024-05-31/18:03:13		data cleaned and returned
+2024-05-31/18:03:13		PDF File saved
+2024-05-31/18:03:16		starting preprocessing
+2024-05-31/18:03:16		trying to load eng stopwords from model
+2024-05-31/18:03:16		trying loading wordlemma
+2024-05-31/18:03:16		lemmatize words preprocessing done
+2024-05-31/18:03:16		starting preprocessing
+2024-05-31/18:03:16		trying to load eng stopwords from model
+2024-05-31/18:03:16		trying loading wordlemma
+2024-05-31/18:03:16		lemmatize words preprocessing done
+2024-05-31/18:03:16		text rank done
+2024-05-31/18:03:16		data cleaned and returned
+2024-05-31/18:03:18		starting preprocessing
+2024-05-31/18:03:18		trying to load eng stopwords from model
+2024-05-31/18:03:18		trying loading wordlemma
+2024-05-31/18:03:18		lemmatize words preprocessing done
+2024-05-31/18:03:18		starting preprocessing
+2024-05-31/18:03:18		trying to load eng stopwords from model
+2024-05-31/18:03:18		trying loading wordlemma
+2024-05-31/18:03:18		lemmatize words preprocessing done
+2024-05-31/18:03:18		text rank done
+2024-05-31/18:03:18		data cleaned and returned
+2024-05-31/18:03:18		PDF File saved
+2024-05-31/18:03:19		starting preprocessing
+2024-05-31/18:03:19		trying to load eng stopwords from model
+2024-05-31/18:03:19		trying loading wordlemma
+2024-05-31/18:03:19		lemmatize words preprocessing done
+2024-05-31/18:03:19		starting preprocessing
+2024-05-31/18:03:19		trying to load eng stopwords from model
+2024-05-31/18:03:19		trying loading wordlemma
+2024-05-31/18:03:19		lemmatize words preprocessing done
+2024-05-31/18:03:19		text rank done
+2024-05-31/18:03:19		data cleaned and returned
+2024-05-31/18:03:19		PDF File saved
+2024-05-31/20:02:54		init done
+2024-05-31/20:02:54		starting editor
+2024-05-31/20:02:54		returning editor new content
+2024-05-31/20:02:54		Saving userdata
+2024-05-31/20:02:54		file saved
+2024-05-31/20:02:54		user edited data saved. no extracting data
+2024-05-31/20:02:55		file saved
+2024-05-31/20:02:55		data extracted and appended to the original userdata
+2024-05-31/20:02:55		init done
+2024-05-31/20:02:55		starting editor
+2024-05-31/20:02:55		returning editor new content
+2024-05-31/20:02:55		Saving userdata
+2024-05-31/20:02:55		file saved
+2024-05-31/20:02:55		user edited data saved. no extracting data
+2024-05-31/20:02:55		file saved
+2024-05-31/20:02:55		data extracted and appended to the original userdata
+2024-05-31/20:02:59		init done
+2024-05-31/20:02:59		starting editor
+2024-05-31/20:02:59		returning editor new content
+2024-05-31/20:02:59		Saving userdata
+2024-05-31/20:02:59		file saved
+2024-05-31/20:02:59		user edited data saved. no extracting data
+2024-05-31/20:02:59		file saved
+2024-05-31/20:02:59		data extracted and appended to the original userdata
+2024-05-31/20:03:01		init done
+2024-05-31/20:03:01		data processed to str
+2024-05-31/20:03:01		updated data to session from doc string
+2024-05-31/20:03:01		starting editor
+2024-05-31/20:03:01		returning editor new content
+2024-05-31/20:03:01		Saving userdata
+2024-05-31/20:03:01		file saved
+2024-05-31/20:03:01		user edited data saved. no extracting data
+2024-05-31/20:03:01		file saved
+2024-05-31/20:03:01		data extracted and appended to the original userdata
+2024-05-31/20:03:04		init done
+2024-05-31/20:03:04		data processed to str
+2024-05-31/20:03:04		updated data to session from doc string
+2024-05-31/20:03:04		starting editor
+2024-05-31/20:03:04		returning editor new content
+2024-05-31/20:03:04		Saving userdata
+2024-05-31/20:03:04		file saved
+2024-05-31/20:03:04		user edited data saved. no extracting data
+2024-05-31/20:03:04		file saved
+2024-05-31/20:03:04		data extracted and appended to the original userdata
+2024-05-31/20:03:10		init done
+2024-05-31/20:03:10		starting editor
+2024-05-31/20:03:10		returning editor new content
+2024-05-31/20:03:10		Saving userdata
+2024-05-31/20:03:10		file saved
+2024-05-31/20:03:10		user edited data saved. no extracting data
+2024-05-31/20:03:10		file saved
+2024-05-31/20:03:10		data extracted and appended to the original userdata
+2024-05-31/20:03:15		init done
+2024-05-31/20:03:19		init done
+2024-05-31/20:03:21		init done
+2024-05-31/20:03:21		data processed to str
+2024-05-31/20:03:21		updated data to session from doc string
+2024-05-31/20:03:21		starting editor
+2024-05-31/20:03:21		returning editor new content
+2024-05-31/20:03:21		Saving userdata
+2024-05-31/20:03:21		file saved
+2024-05-31/20:03:21		user edited data saved. no extracting data
+2024-05-31/20:03:21		file saved
+2024-05-31/20:03:21		data extracted and appended to the original userdata
+2024-05-31/20:03:21		init done
+2024-05-31/20:03:21		starting editor
+2024-05-31/20:03:21		returning editor new content
+2024-05-31/20:03:21		Saving userdata
+2024-05-31/20:03:21		file saved
+2024-05-31/20:03:21		user edited data saved. no extracting data
+2024-05-31/20:03:21		file saved
+2024-05-31/20:03:21		data extracted and appended to the original userdata
+2024-05-31/20:03:25		init done
+2024-05-31/20:03:25		starting editor
+2024-05-31/20:03:25		returning editor new content
+2024-05-31/20:03:25		Saving userdata
+2024-05-31/20:03:25		file saved
+2024-05-31/20:03:25		user edited data saved. no extracting data
+2024-05-31/20:03:25		file saved
+2024-05-31/20:03:25		data extracted and appended to the original userdata
+2024-05-31/20:03:26		init done
+2024-05-31/20:03:26		starting editor
+2024-05-31/20:03:26		returning editor new content
+2024-05-31/20:03:26		Saving userdata
+2024-05-31/20:03:26		file saved
+2024-05-31/20:03:26		user edited data saved. no extracting data
+2024-05-31/20:03:26		file saved
+2024-05-31/20:03:26		data extracted and appended to the original userdata
+2024-05-31/20:03:27		init done
+2024-05-31/20:03:27		starting editor
+2024-05-31/20:03:27		returning editor new content
+2024-05-31/20:03:27		Saving userdata
+2024-05-31/20:03:27		file saved
+2024-05-31/20:03:27		user edited data saved. no extracting data
+2024-05-31/20:03:27		file saved
+2024-05-31/20:03:27		data extracted and appended to the original userdata
+2024-05-31/20:02:54		starting preprocessing
+2024-05-31/20:02:54		trying to load eng stopwords from model
+2024-05-31/20:02:54		trying loading wordlemma
+2024-05-31/20:02:54		lemmatize words preprocessing done
+2024-05-31/20:02:54		starting preprocessing
+2024-05-31/20:02:54		trying to load eng stopwords from model
+2024-05-31/20:02:54		trying loading wordlemma
+2024-05-31/20:02:54		lemmatize words preprocessing done
+2024-05-31/20:02:55		text rank done
+2024-05-31/20:02:55		data cleaned and returned
+2024-05-31/20:02:55		starting preprocessing
+2024-05-31/20:02:55		trying to load eng stopwords from model
+2024-05-31/20:02:55		trying loading wordlemma
+2024-05-31/20:02:55		lemmatize words preprocessing done
+2024-05-31/20:02:55		starting preprocessing
+2024-05-31/20:02:55		trying to load eng stopwords from model
+2024-05-31/20:02:55		trying loading wordlemma
+2024-05-31/20:02:55		lemmatize words preprocessing done
+2024-05-31/20:02:55		text rank done
+2024-05-31/20:02:55		data cleaned and returned
+2024-05-31/20:02:59		starting preprocessing
+2024-05-31/20:02:59		trying to load eng stopwords from model
+2024-05-31/20:02:59		trying loading wordlemma
+2024-05-31/20:02:59		lemmatize words preprocessing done
+2024-05-31/20:02:59		starting preprocessing
+2024-05-31/20:02:59		trying to load eng stopwords from model
+2024-05-31/20:02:59		trying loading wordlemma
+2024-05-31/20:02:59		lemmatize words preprocessing done
+2024-05-31/20:02:59		text rank done
+2024-05-31/20:02:59		data cleaned and returned
+2024-05-31/20:03:01		starting preprocessing
+2024-05-31/20:03:01		trying to load eng stopwords from model
+2024-05-31/20:03:01		trying loading wordlemma
+2024-05-31/20:03:01		lemmatize words preprocessing done
+2024-05-31/20:03:01		starting preprocessing
+2024-05-31/20:03:01		trying to load eng stopwords from model
+2024-05-31/20:03:01		trying loading wordlemma
+2024-05-31/20:03:01		lemmatize words preprocessing done
+2024-05-31/20:03:01		text rank done
+2024-05-31/20:03:01		data cleaned and returned
+2024-05-31/20:03:04		starting preprocessing
+2024-05-31/20:03:04		trying to load eng stopwords from model
+2024-05-31/20:03:04		trying loading wordlemma
+2024-05-31/20:03:04		lemmatize words preprocessing done
+2024-05-31/20:03:04		starting preprocessing
+2024-05-31/20:03:04		trying to load eng stopwords from model
+2024-05-31/20:03:04		trying loading wordlemma
+2024-05-31/20:03:04		lemmatize words preprocessing done
+2024-05-31/20:03:04		text rank done
+2024-05-31/20:03:04		data cleaned and returned
+2024-05-31/20:03:10		starting preprocessing
+2024-05-31/20:03:10		trying to load eng stopwords from model
+2024-05-31/20:03:10		trying loading wordlemma
+2024-05-31/20:03:10		lemmatize words preprocessing done
+2024-05-31/20:03:10		starting preprocessing
+2024-05-31/20:03:10		trying to load eng stopwords from model
+2024-05-31/20:03:10		trying loading wordlemma
+2024-05-31/20:03:10		lemmatize words preprocessing done
+2024-05-31/20:03:10		text rank done
+2024-05-31/20:03:10		data cleaned and returned
+2024-05-31/20:03:21		starting preprocessing
+2024-05-31/20:03:21		trying to load eng stopwords from model
+2024-05-31/20:03:21		trying loading wordlemma
+2024-05-31/20:03:21		lemmatize words preprocessing done
+2024-05-31/20:03:21		starting preprocessing
+2024-05-31/20:03:21		trying to load eng stopwords from model
+2024-05-31/20:03:21		trying loading wordlemma
+2024-05-31/20:03:21		lemmatize words preprocessing done
+2024-05-31/20:03:21		text rank done
+2024-05-31/20:03:21		data cleaned and returned
+2024-05-31/20:03:21		starting preprocessing
+2024-05-31/20:03:21		trying to load eng stopwords from model
+2024-05-31/20:03:21		trying loading wordlemma
+2024-05-31/20:03:21		lemmatize words preprocessing done
+2024-05-31/20:03:21		starting preprocessing
+2024-05-31/20:03:21		trying to load eng stopwords from model
+2024-05-31/20:03:21		trying loading wordlemma
+2024-05-31/20:03:21		lemmatize words preprocessing done
+2024-05-31/20:03:21		text rank done
+2024-05-31/20:03:21		data cleaned and returned
+2024-05-31/20:03:25		starting preprocessing
+2024-05-31/20:03:25		trying to load eng stopwords from model
+2024-05-31/20:03:25		trying loading wordlemma
+2024-05-31/20:03:25		lemmatize words preprocessing done
+2024-05-31/20:03:25		starting preprocessing
+2024-05-31/20:03:25		trying to load eng stopwords from model
+2024-05-31/20:03:25		trying loading wordlemma
+2024-05-31/20:03:25		lemmatize words preprocessing done
+2024-05-31/20:03:25		text rank done
+2024-05-31/20:03:25		data cleaned and returned
+2024-05-31/20:03:26		starting preprocessing
+2024-05-31/20:03:26		trying to load eng stopwords from model
+2024-05-31/20:03:26		trying loading wordlemma
+2024-05-31/20:03:26		lemmatize words preprocessing done
+2024-05-31/20:03:26		starting preprocessing
+2024-05-31/20:03:26		trying to load eng stopwords from model
+2024-05-31/20:03:26		trying loading wordlemma
+2024-05-31/20:03:26		lemmatize words preprocessing done
+2024-05-31/20:03:26		text rank done
+2024-05-31/20:03:26		data cleaned and returned
+2024-05-31/20:03:26		PDF File saved
+2024-05-31/20:03:27		starting preprocessing
+2024-05-31/20:03:27		trying to load eng stopwords from model
+2024-05-31/20:03:27		trying loading wordlemma
+2024-05-31/20:03:27		lemmatize words preprocessing done
+2024-05-31/20:03:27		starting preprocessing
+2024-05-31/20:03:27		trying to load eng stopwords from model
+2024-05-31/20:03:27		trying loading wordlemma
+2024-05-31/20:03:27		lemmatize words preprocessing done
+2024-05-31/20:03:27		text rank done
+2024-05-31/20:03:27		data cleaned and returned
+2024-05-31/20:03:28		PDF File saved
