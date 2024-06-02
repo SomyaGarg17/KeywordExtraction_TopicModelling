@@ -111,6 +111,82 @@ telecom_keywords = ['telecom', 'telecommunications', 'wireless', 'networks', 'in
                     'satellite communications', 'mobile devices', 'smartphones', 'telecom services', 
                     'telecom regulation', 'telecom policy']
 
+education_keywords = ['school', 'university', 'college', 'learning', 'teaching', 'curriculum', 'students', 'education policy', 
+                      'online courses', 'e-learning', 'distance learning', 'training', 'classroom', 'educational technology',
+                      'pedagogy', 'tutoring', 'academic research', 'higher education', 'primary education', 'secondary education',
+                      'special education','vocational training', 'scholarships', 'degrees', 'diplomas', 'certifications', 'textbooks',
+                      'exams', 'assessments', 'educational reform', 'literacy', 'early childhood education']
+
+politics_keywords = ['government', 'election', 'policy', 'law', 'democracy', 'political party', 'parliament', 'congress', 
+                     'president', 'legislation', 'campaign', 'voting', 'governance', 'public administration', 
+                     'international relations', 'diplomacy', 'political debate', 'political ideology', 'socialism', 'capitalism', 
+                     'communism', 'liberalism', 'conservatism', 'political corruption', 'human rights', 'civil rights', 'immigration',
+                     'foreign policy', 'national security', 'military', 'defense', 'public opinion', 'political movements', 'protests', 
+                     'lobbying']
+
+environment_keywords = ['climate change', 'global warming', 'sustainability', 'pollution', 'conservation', 'renewable energy', 
+                        'solar power', 'wind power', 'biodiversity', 'ecosystem', 'recycling', 'waste management', 
+                        'environmental policy', 'green technology', 'carbon footprint', 'deforestation', 'reforestation', 
+                        'wildlife protection', 'endangered species', 'natural resources', 'water conservation', 'air quality', 
+                        'environmental activism', 'climate policy', 'ecological footprint', 'habitat loss', 'marine conservation', 
+                        'plastic pollution', 'environmental impact', 'green energy', 'sustainable development']
+
+entertainment_keywords = ['movies', 'films', 'cinema', 'music', 'TV shows', 'television', 'celebrities', 'theater', 'concerts', 
+                          'entertainment industry', 'media', 'sports', 'games', 'awards', 'festivals', 'streaming services', 'actors', 
+                          'actresses', 'directors', 'producers', 'music industry', 'albums', 'singles', 'live performances', 'comedy', 
+                          'drama', 'action', 'romance', 'horror', 'sci-fi', 'fantasy', 'animation', 'reality TV', 'documentaries', 
+                          'pop culture', 'fan base', 'entertainment news', 'box office']
+
+science_keywords = ['research', 'experiment', 'discovery', 'physics', 'chemistry', 'biology', 'space', 'astronomy', 'scientific method', 
+                    'laboratory', 'innovation', 'theory', 'hypothesis', 'data analysis', 'genetics', 'microbiology', 'neuroscience', 
+                    'ecology', 'geology', 'paleontology', 'zoology', 'botany', 'biochemistry', 'astrophysics', 'quantum mechanics', 
+                    'scientific journal', 'peer review', 'scientific community', 'climate science', 'environmental science', 
+                    'materials science', 'forensic science', 'scientific breakthrough', 'scientific conference']
+
+travel_keywords = ['tourism', 'destinations', 'flights', 'airlines', 'airports', 'hotels', 'accommodation', 'vacation', 'travel guides', 
+                   'sightseeing', 'backpacking', 'adventure', 'travel tips', 'cultural experiences', 'travel planning', 'tours', 
+                   'travel insurance', 'travel agency', 'road trip', 'travel photography', 'travel blogs', 'travel vlogs', 
+                   'holiday packages', 'ecotourism', 'travel budget', 'visa', 'passport', 'travel restrictions', 'landmarks', 
+                   'historical sites', 'beach resorts', 'mountain retreats', 'urban exploration', 'travel apps', 'solo travel', 
+                   'group travel']
+
+food_keywords = ['recipes', 'cooking', 'cuisine', 'restaurants', 'nutrition', 'ingredients', 'dining', 'food industry', 'culinary', 
+                 'baking', 'food culture', 'gastronomy', 'chef', 'meal planning', 'vegetarian', 'vegan', 'gluten-free', 'organic', 
+                 'fast food', 'street food', 'fine dining', 'food blogs', 'food vlogs', 'food photography', 'food reviews', 
+                 'grocery shopping', 'food festivals', 'food markets', 'farm-to-table', 'sustainable food', 'food safety', 
+                 'diet', 'healthy eating', 'food trends', 'ethnic cuisine', 'home cooking']
+
+sports_keywords = ['football', 'soccer', 'basketball', 'tennis', 'baseball', 'athletes', 'Olympics', 'sports events', 'training', 
+                   'competitions', 'fitness', 'teams', 'sports news', 'championships', 'tournaments', 'sports leagues', 
+                   'sports equipment', 'coaching', 'sportsmanship', 'sports medicine', 'injury prevention', 'sports psychology', 
+                   'workout routines', 'gym', 'exercise','nutrition for athletes', 'doping', 'sports sponsorship', 'fan clubs', 
+                   'stadiums', 'sports facilities', 'sports statistics', 'youth sports', 'recreational sports']
+
+fashion_keywords = ['trends', 'clothing', 'designers', 'runway', 'style', 'fashion week', 'accessories', 'beauty', 'models', 
+                    'fashion industry', 'brands', 'haute couture', 'streetwear', 'fashion photography', 'fashion magazines', 
+                    'fashion blogs', 'fashion vlogs', 'wardrobe', 'outfit', 'textiles', 'sustainable fashion', 'fashion history', 
+                    'vintage fashion', 'menswear', 'womenswear', "children’s fashion", 'footwear', 'jewelry', 'handbags', 
+                    'fashion design', 'personal styling', 'fashion marketing', 'fashion merchandising', 'fashion shows', 'fashion icons']
+
+forest_keywords = ['forestry' ,'deforestation', 'reforestation', 'afforestation', 'forest conservation', 'biodiversity', 'rainforest', 
+                   'temperate forest', 'tropical forest', 'boreal forest', 'deciduous forest', 'coniferous forest', 'forest ecosystem', 
+                   'canopy', 'underbrush', 'forest management', 'sustainable forestry', 'old-growth forest', 'forest restoration', 
+                   'forest habitat', 'forest fire', 'wildfire', 'logging', 'timber', 'woodlands', 'national parks', 'forest reserves', 
+                   'protected areas', 'forest carbon sequestration', 'forest policy', 'illegal logging', 'reforestation projects', 
+                   'forest ecology', 'forest biodiversity', 'agroforestry', 'carbon sink', 'forest rangers', 'forest laws', 
+                   'forest certification', 'ecosystem services', 'forest carbon credits']
+
+wildlife_keywords = ['wildlife conservation', 'endangered species', 'wildlife protection', 'wildlife habitat', 'biodiversity', 
+                     'poaching', 'wildlife trafficking', 'animal migration', 'wildlife sanctuary', 'wildlife reserve', 'national park', 
+                     'animal behavior', 'wildlife ecology', 'species preservation', 'wildlife corridors', 'wildlife monitoring', 
+                     'wildlife research', 'habitat loss', 'wildlife population', 'marine wildlife', 'terrestrial wildlife', 
+                     'avian wildlife', 'reptiles', 'mammals', 'amphibians', 'wildlife rehabilitation', 'wildlife management', 
+                     'wildlife tourism', 'ecosystem balance', 'apex predators', 'keystone species', 'invasive species', 'wildlife laws', 
+                     'animal tracking', 'wildlife conservation programs', 'wildlife photography', 'wildlife documentaries', 
+                     'human-wildlife conflict', 'wildlife poachers', 'wildlife conservation organizations', 'wildlife rescue', 
+                     'natural habitat', 'wildlife corridors', 'wildlife migration patterns', 'conservation genetics', 
+                     'wildlife reintroduction']
+
 information_technology_keywords = [
     "Artificial intelligence", "Machine learning", "Data Science", "Big Data", "Cloud Computing",
     "Cybersecurity", "Information security", "Network security", "Blockchain", "Cryptocurrency",
@@ -135,7 +211,18 @@ industries = {
     'Manufacturing': manufacturing_keywords,
     'Automotive': automotive_keywords,
     'Telecom': telecom_keywords,
-    'IT': information_technology_keywords
+    'IT': information_technology_keywords,
+    'Education': education_keywords,
+    'Politics': politics_keywords,
+    'Environment': environment_keywords,
+    'Entertainment': entertainment_keywords,
+    'Science': science_keywords,
+    'Travel': travel_keywords,
+    'Food': food_keywords,
+    'Fashion': fashion_keywords,
+    'Sports': sports_keywords,
+    'Forest': forest_keywords,
+    'Wildlife': wildlife_keywords
 }
 
 def save_to_file(str_data, readmode = "w"):

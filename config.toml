@@ -1,9 +1,0 @@
-[server]
-headless = false
-enableCORS=true
-port = 8501
-runOnSave = false
-[theme]
-base="dark"
-backgroundColor = "#000000"
-secondaryBackgroundColor = "#262730"
