@@ -676,7 +676,8 @@ elif option == "Keyword Sentiment Analysis":
 		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
 		if not hasattr(vectorizer, 'vocabulary_'):
 			st.error("The vectorizer is not fitted. Please fit the vectorizer first.")
-      			st.stop()
+			st.stop()
+			
 		vec_inputs = vectorizer.transform([text_input])
 		# Keyword extraction 
 		r = Rake(language='english')
