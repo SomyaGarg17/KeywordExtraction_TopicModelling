@@ -674,7 +674,7 @@ elif option == "Keyword Sentiment Analysis":
 		
 		# Vectorize the inputs 
 		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
-		vec_inputs = vectorizer.transform([text_input])
+		vec_inputs = vectorizer.fit_transform([text_input])
 		# Keyword extraction 
 		r = Rake(language='english')
 		r.extract_keywords_from_text(text_input)
