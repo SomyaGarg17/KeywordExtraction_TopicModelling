@@ -52,7 +52,7 @@ insurance_keywords = ['actuary', 'claims', 'coverage', 'deductible', 'policyhold
                       'insurance fraud', 'health savings account', 'health maintenance organization', 
                       'preferred provider organization']
 
-finance_keywords = ['asset', 'liability', 'equity', 'capital', 'portfolio', 'dividend', 'financial statement', 
+finance_keywords = ['assets', 'liability', 'equity', 'capital', 'portfolio', 'dividend', 'financial statement', 
                     'balance sheet', 'income statement', 'cash flow statement', 'statement of retained earnings', 
                     'financial ratio', 'valuation', 'bond', 'stock', 'mutual fund', 'exchange-traded fund', 
                     'hedge fund', 'private equity', 'venture capital', 'mergers and acquisitions', 
@@ -195,19 +195,25 @@ def label_topic(text):
     # Count the number of occurrences of each keyword in the text for each industry
     counts = {}
     for industry, keywords in industries.items():
-        count = sum([1 for keyword in keywords if re.search(r"\b{}\b".format(keyword), text, re.IGNORECASE)])
+        count = sum(1 for keyword in keywords if re.search(r"\b{}\b".format(keyword), text, re.IGNORECASE))
         counts[industry] = count
+
+       # If no industry has a count, return None
+    non_zero_counts = {industry: count for industry, count in counts.items() if count > 0}
+
+      # If no industry has a non-zero count, return None
+    if not non_zero_counts:
+        return None
     
-    # Get the top two industries based on their counts
-    top_industries = heapq.nlargest(2, counts, key=counts.get)
-   
+
+    top_industries = heapq.nlargest(2, non_zero_counts, key=non_zero_counts.get)
+
     # If only one industry was found, return it
     if len(top_industries) == 1:
         return top_industries[0]
-  
+    
     # If two industries were found, return them both
-    else:
-        return top_industries
+    return top_industries
 
 #This function performs topic modelling including steps like preprocessing text and using LDA Model 
 def perform_topic_modeling(transcript_text, num_topics=5, num_words=10):
@@ -265,10 +271,10 @@ def preprocess_text(text):
 
     return preprocessed_text
 
-""" This function is decorated with @st.cache_resource, 
-    which means that the result of this function will be cached and reused 
-    if the function is called again with the same arguments.
-"""
+# This function is decorated with @st.cache_resource, 
+ #   which means that the result of this function will be cached and reused 
+  #  if the function is called again with the same arguments.
+
 @st.cache_resource
 #This function is responsible for loading a pre-trained Whisper model for automatic speech recognition 
 def load_model():
@@ -281,14 +287,24 @@ def load_model():
 #as an MP4 file
 def save_video(url):
    
-    yt = YouTube(url)
-    stream = yt.streams.first()
-    output_path = "/Users/somyagarg/Desktop/Projects/KeywordExtraction_TopicModelling"
-    filename = f"{yt.title}.mp4"
-    file_path = os.path.join(output_path, filename)
-    stream.download(filename=file_path)
-
-    return yt.title, filename, file_path
+    try:
+        # Create YouTube object
+        yt = YouTube(url)        
+        # Get the first available stream
+        stream = yt.streams.first()
+        # Define the filename with the video title and .mp4 extension
+        filename = f"{yt.title}.mp4"
+        # Get the current working directory
+        output_path = os.getcwd()
+        # Combine the output path and filename to get the full file path
+        file_path = os.path.join(output_path, filename)
+        # Download the video to the specified path
+        stream.download(filename=filename)
+        # Return the video title, filename, and full file path
+        return yt.title, filename, file_path
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return None, None, None
 
 #This function converts the video into transcript
 def video_to_transcript(video_file):
