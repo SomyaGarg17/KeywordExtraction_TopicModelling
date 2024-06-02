@@ -46,7 +46,7 @@ docx==0.2.4
 
 docx2txt==0.8
 
-en-core-web-sm==3.7.1 (from https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz)
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
 
 executing==2.0.1
 
