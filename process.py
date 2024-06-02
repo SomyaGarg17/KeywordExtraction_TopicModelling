@@ -8,7 +8,7 @@ from logger import Logger
 import os
 import base64
 import streamlit as st
-from docx import Document
+#from docx import Document
 from sklearn.feature_extraction.text import TfidfVectorizer
 import nltk
 from nltk.corpus import stopwords # Import stopwords from nltk.corpus
@@ -118,10 +118,74 @@ def text_to_pdf(text, filename):
     logger.log(file, "PDF File saved")
 
 def text_doc(file, filename):
-    doc = Document()
-    line = file.read()
-    doc.add_paragraph(line)
-    doc.save(filename + ".doc")
+    # Read the content from the input file
+    content = file.read()
+    
+    # Define the structure of the Word document
+    word_document = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+        <w:body>
+            <w:p>
+                <w:r>
+                    <w:t>{content}</w:t>
+                </w:r>
+            </w:p>
+        </w:body>
+    </w:document>"""
+
+    # Create the required folders and files for a .docx file
+    os.makedirs(f'{filename}_files/word', exist_ok=True)
+    os.makedirs(f'{filename}_files/_rels', exist_ok=True)
+    os.makedirs(f'{filename}_files/docProps', exist_ok=True)
+    
+    # Write the content to the document.xml file
+    with open(f'{filename}_files/word/document.xml', 'w', encoding='utf-8') as f:
+        f.write(word_document)
+    
+    # Create the other necessary files
+    with open(f'{filename}_files/[Content_Types].xml', 'w', encoding='utf-8') as f:
+        f.write('''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+            <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+                <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+                <Default Extension="xml" ContentType="application/xml"/>
+                <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+            </Types>''')
+
+    with open(f'{filename}_files/_rels/.rels', 'w', encoding='utf-8') as f:
+        f.write('''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+            <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+                <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+            </Relationships>''')
+
+    with open(f'{filename}_files/docProps/core.xml', 'w', encoding='utf-8') as f:
+        f.write('''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+            <cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <dc:title></dc:title>
+                <dc:subject></dc:subject>
+                <dc:creator></dc:creator>
+                <cp:keywords></cp:keywords>
+                <dc:description></dc:description>
+                <cp:lastModifiedBy></cp:lastModifiedBy>
+                <cp:revision>1</cp:revision>
+                <dcterms:created xsi:type="dcterms:W3CDTF"></dcterms:created>
+                <dcterms:modified xsi:type="dcterms:W3CDTF"></dcterms:modified>
+            </cp:coreProperties>''')
+
+    # Create the .docx file
+    with zipfile.ZipFile(f'{filename}.docx', 'w') as docx:
+        docx.write(f'{filename}_files/word/document.xml', 'word/document.xml')
+        docx.write(f'{filename}_files/[Content_Types].xml', '[Content_Types].xml')
+        docx.write(f'{filename}_files/_rels/.rels', '_rels/.rels')
+        docx.write(f'{filename}_files/docProps/core.xml', 'docProps/core.xml')
+    
+    # Clean up the temporary files
+    for root, dirs, files in os.walk(f'{filename}_files', topdown=False):
+        for name in files:
+            os.remove(os.path.join(root, name))
+        for name in dirs:
+            os.rmdir(os.path.join(root, name))
+    os.rmdir(f'{filename}_files')
+
 
 
 def extract_keywords_lsa(text, num_keywords=10):
