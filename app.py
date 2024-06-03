@@ -421,7 +421,7 @@ st.image(display,width=1000)
 # Sidebar options
 option = st.sidebar.selectbox('Navigation', 
                               ["Home","Keyword Extractor", "Topic Modelling and Labelling","Email Spam Classifier", 
-                                "Keyword Sentiment Analysis", "Word Cloud", "N-Gram Analysis", "Named Entity Recognition",
+			       "Word Cloud", "N-Gram Analysis", "Named Entity Recognition",
                                 "Text Summarizer"])
 
 if option == 'Home':
@@ -648,48 +648,6 @@ elif option == "Email Spam Classifier":
 		else:
 			st.write("This message is **Not Spam**")
                
-# Keyword Sentiment Analysis
-elif option == "Keyword Sentiment Analysis":
-	st.header("Sentiment Analysis Tool")
-	st.subheader("Enter the statement that you want to analyze")
-	text_input = st.text_area("Enter sentence", height=50)
-	# Model Selection 
-	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
-
-	if st.button("Predict"):
-		
-		# Load the model 
-		if model_select == "SVC":
-			sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
-		elif model_select == "Logistic Regression":
-			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
-		elif model_select == "Naive Bayes":
-			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
-		
-		# Vectorize the inputs 
-		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
-		if not hasattr(vectorizer, 'vocabulary_'):
-			st.error("The vectorizer is not fitted. Please fit the vectorizer first.")
-			st.stop()
-			
-		vec_inputs = vectorizer.transform([text_input])
-		# Keyword extraction 
-		r = Rake(language='english')
-		r.extract_keywords_from_text(text_input)
-		# Get the important phrases
-		phrases = r.get_ranked_phrases()
-		
-        # Make the prediction 
-		if sentiment_model.predict(vec_inputs):
-			st.write("This statement is **Positve**")
-		else:
-			st.write("This statement is **Negative**")
-
-		# Display the important phrases
-		st.write("These are the **keywords** causing the above sentiment:")
-		for i, p in enumerate(phrases):
-			st.write(i+1, p)
-
 # Word Cloud Feature
 elif option == "Word Cloud":
 	st.header("Generate Word Cloud")
