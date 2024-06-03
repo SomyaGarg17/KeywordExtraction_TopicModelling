@@ -508,12 +508,13 @@ elif option=="Topic Modelling and Labelling":
 	    st.subheader("Topic Modeling and Labeling on Text")
 	    if 'text_input' not in st.session_state:
 		    st.session_state.text_input = ''
-	    text_input = st.session_state.text_area("Paste enter text below", height=400)
+	    text_input = st.text_area("Paste enter text below", st.session_state.text_input)
        
         # Model Selection 
 	    model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
 	    if text_input is not None:
 		    if st.button("Analyze Text"):
+			    st.session_state.text_input = text_input
 			    if model_select == "Latent Semantic Analysis":
 				    col1, col2, col3 = st.columns([1,1,1])
 	   
