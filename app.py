@@ -527,7 +527,7 @@ elif option=="Topic Modelling and Labelling":
 					    topics = perform_topic_modeling(text_input)
 					    # Display the resulting topics in the app
 					    st.info("Topics in the Text")
-				            for topic in topics:
+					    for topic in topics:
 						    st.success(f"{topic[0]}: {', '.join(topic[1])}")
 		
 				    with col3:
