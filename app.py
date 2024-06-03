@@ -538,14 +538,11 @@ elif option=="Topic Modelling and Labelling":
 					    st.write(industry)
 			    else:
 				    col1, col2, col3 = st.columns([1,1,1])
-			      
 				    with col1:
 					    st.info("Text is below")
-					    #Prints the text as the user provided
-				    	    st.success(text_input)
+					    st.success(text_input)
 		
 				    with col2:
-					    # Perform topic modeling on the transcript text
 					    topics = perform_topic_modeling_LDA(text_input)
 					    # Display the resulting topics in the app
 					    st.info("Topics in the Text")
