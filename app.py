@@ -542,7 +542,7 @@ elif option=="Topic Modelling and Labelling":
 				    with col1:
 					    st.info("Text is below")
 					    #Prints the text as the user provided
-				            st.success(text_input)
+				    	    st.success(text_input)
 		
 				    with col2:
 					    # Perform topic modeling on the transcript text
