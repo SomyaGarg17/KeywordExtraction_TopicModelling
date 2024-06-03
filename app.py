@@ -505,67 +505,64 @@ elif option=="Topic Modelling and Labelling":
    
     # Perform analysis based on the selected choice
     if choice == "On Text":
-        st.subheader("Topic Modeling and Labeling on Text")
-
-	    # Initialize session state for text_input
-	if 'text_input' not in st.session_state:
-		st.session_state.text_input = ''
-         # Create a text area widget to allow users to paste transcripts
-        text_input = st.session_state.text_area("Paste enter text below", height=400)
+	    st.subheader("Topic Modeling and Labeling on Text")
+	    if 'text_input' not in st.session_state:
+		    st.session_state.text_input = ''
+	    text_input = st.session_state.text_area("Paste enter text below", height=400)
        
         # Model Selection 
-        model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
-        if text_input is not None:
-           
-            if st.button("Analyze Text"):
-           
-                if model_select == "Latent Semantic Analysis":
-                    col1, col2, col3 = st.columns([1,1,1])
-           
-                    with col1:
-                        st.info("Text is below")
-                        #Prints the text as the user provided
-                        st.success(text_input)
+	model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
+	if text_input is not None:
+	   
+	    if st.button("Analyze Text"):
+	   
+		if model_select == "Latent Semantic Analysis":
+		    col1, col2, col3 = st.columns([1,1,1])
+	   
+		    with col1:
+			st.info("Text is below")
+			#Prints the text as the user provided
+			st.success(text_input)
 
-                    with col2:
-                        # Perform topic modeling on the transcript text
-                        topics = perform_topic_modeling(text_input)
-                        # Display the resulting topics in the app
-                        st.info("Topics in the Text")
-                        for topic in topics:
-                            st.success(f"{topic[0]}: {', '.join(topic[1])}")
+		    with col2:
+			# Perform topic modeling on the transcript text
+			topics = perform_topic_modeling(text_input)
+			# Display the resulting topics in the app
+			st.info("Topics in the Text")
+			for topic in topics:
+			    st.success(f"{topic[0]}: {', '.join(topic[1])}")
 
-                    with col3:
-                        st.info("Topic Labeling")
-                        labeling_text = text_input
-                        #Performs topic Labeling
-                        industry = label_topic(labeling_text)
-                        st.markdown("**Topic Labeling Industry Wise**")
-                        st.write(industry)
-          
-                else:
-                    col1, col2, col3 = st.columns([1,1,1])
-              
-                    with col1:
-                        st.info("Text is below")
-                        #Prints the text as the user provided
-                        st.success(text_input)
+		    with col3:
+			st.info("Topic Labeling")
+			labeling_text = text_input
+			#Performs topic Labeling
+			industry = label_topic(labeling_text)
+			st.markdown("**Topic Labeling Industry Wise**")
+			st.write(industry)
+	  
+		else:
+		    col1, col2, col3 = st.columns([1,1,1])
+	      
+		    with col1:
+			st.info("Text is below")
+			#Prints the text as the user provided
+			st.success(text_input)
 
-                    with col2:
-                        # Perform topic modeling on the transcript text
-                        topics = perform_topic_modeling_LDA(text_input)
-                        # Display the resulting topics in the app
-                        st.info("Topics in the Text")
-                        for topic in topics:
-                            st.success(f"{topic[0]}: {', '.join(topic[1])}")
+		    with col2:
+			# Perform topic modeling on the transcript text
+			topics = perform_topic_modeling_LDA(text_input)
+			# Display the resulting topics in the app
+			st.info("Topics in the Text")
+			for topic in topics:
+			    st.success(f"{topic[0]}: {', '.join(topic[1])}")
 
-                    with col3:
-                        st.info("Topic Labeling")
-                        labeling_text = text_input
-                        #Performs topic Labeling
-                        industry = label_topic(labeling_text)
-                        st.markdown("**Topic Labeling Industry Wise**")
-                        st.write(industry)
+		    with col3:
+			st.info("Topic Labeling")
+			labeling_text = text_input
+			#Performs topic Labeling
+			industry = label_topic(labeling_text)
+			st.markdown("**Topic Labeling Industry Wise**")
+			st.write(industry)
             
     elif choice == "On Video":
         st.subheader("Topic Modeling and Labeling on Video")
