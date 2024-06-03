@@ -533,9 +533,8 @@ elif option=="Topic Modelling and Labelling":
 				    with col3:
 					    st.info("Topic Labeling")
 					    labeling_text = text_input
-				        	#Performs topic Labeling
-				            industry = label_topic(labeling_text)
-				            st.markdown("**Topic Labeling Industry Wise**")
+					    industry = label_topic(labeling_text)
+					    st.markdown("**Topic Labeling Industry Wise**")
 					    st.write(industry)
 	  
 				else:
