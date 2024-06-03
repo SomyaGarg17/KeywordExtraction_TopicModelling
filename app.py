@@ -536,8 +536,7 @@ elif option=="Topic Modelling and Labelling":
 					    industry = label_topic(labeling_text)
 					    st.markdown("**Topic Labeling Industry Wise**")
 					    st.write(industry)
-	  
-				else:
+			    else:
 				    col1, col2, col3 = st.columns([1,1,1])
 			      
 				    with col1:
@@ -546,17 +545,17 @@ elif option=="Topic Modelling and Labelling":
 				            st.success(text_input)
 		
 				    with col2:
-					     # Perform topic modeling on the transcript text
-					     topics = perform_topic_modeling_LDA(text_input)
-					     # Display the resulting topics in the app
-					     st.info("Topics in the Text")
-					     for topic in topics:
-						     st.success(f"{topic[0]}: {', '.join(topic[1])}")
+					    # Perform topic modeling on the transcript text
+					    topics = perform_topic_modeling_LDA(text_input)
+					    # Display the resulting topics in the app
+					    st.info("Topics in the Text")
+					    for topic in topics:
+						    st.success(f"{topic[0]}: {', '.join(topic[1])}")
 		
 				    with col3:
 					    st.info("Topic Labeling")
 					    labeling_text = text_input
-				        	#Performs topic Labeling
+					    #Performs topic Labeling
 					    industry = label_topic(labeling_text)
 					    st.markdown("**Topic Labeling Industry Wise**")
 					    st.write(industry)
