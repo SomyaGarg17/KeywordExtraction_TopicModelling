@@ -506,9 +506,12 @@ elif option=="Topic Modelling and Labelling":
     # Perform analysis based on the selected choice
     if choice == "On Text":
         st.subheader("Topic Modeling and Labeling on Text")
-        
+
+	    # Initialize session state for text_input
+	if 'text_input' not in st.session_state:
+		st.session_state.text_input = ''
          # Create a text area widget to allow users to paste transcripts
-        text_input = st.text_area("Paste enter text below", height=400)
+        text_input = st.session_state.text_area("Paste enter text below", height=400)
        
         # Model Selection 
         model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
