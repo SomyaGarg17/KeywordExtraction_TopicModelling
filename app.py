@@ -695,6 +695,7 @@ elif option == "Named Entity Recognition":
 
 # Text Summarizer 
 elif option == "Text Summarizer": 
+	nltk.download('punkt')
 	st.header("Text Summarization")
 	st.subheader("Enter a corpus that you want to summarize")
 	text_input = st.text_area("Enter a paragraph", height=150)
