@@ -433,21 +433,19 @@ if option == 'Home':
 		)
     
 elif option=="Keyword Extractor":
-
-    file = open("log.txt", "a+")
-    logger = Logger()
-    
-    if "load_state" not in st.session_state:
-        st.session_state['load_state'] = False
-        st.session_state['load_editor'] = False
-        st.session_state['str_value'] = None
-
-    if __name__ == '__main__':
-        st.session_state['user_data'] = 0
-        st.session_state['load_state'] = True
-        boundary = "\n"*4 + "=====Keywords======" + "\n"*4
-
-        st.title("Keyword Extractor")
+	file = open("log.txt", "a+")
+	logger = Logger()
+	
+	if "load_state" not in st.session_state:
+		st.session_state['load_state'] = False
+        	st.session_state['load_editor'] = False
+        	st.session_state['str_value'] = None
+		
+	if __name__ == '__main__':
+		st.session_state['user_data'] = 0
+        	st.session_state['load_state'] = True
+        	boundary = "\n"*4 + "=====Keywords======" + "\n"*4
+	st.title("Keyword Extractor")
         st.caption("An application that automatically extracts key terms from large text documents using advanced algorithms. Ideal for improving content analysis and search functionality.")
         st.write("\n")
         st.subheader("Upload File")
@@ -455,48 +453,47 @@ elif option=="Keyword Extractor":
         logger.log(file, "init done")
         uploaded_file = st.file_uploader("Upload Doc or Docx File Only",type = [".doc","docx"])
         str_data = get_doc(uploaded_file)
-
-    if str_data or st.session_state['load_editor']:
-        data = run_editor(str_data)
-
-    if st.session_state['str_value'] is not None:
-       
-        if st.button("Save & Extract") or st.session_state['load_state']:
-		logger.log(file, "Saving userdata")
-            	data = data + boundary
-            	save_to_file(data)
-            	model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])
-		if model_select == "Latent Semantic Analysis":
-			logger.log(file, "user edited data saved. no extracting data")
-		   	save_to_file(text_process_lsa(data), readmode="a+")
-		    	st.success(text_process_lsa(data))
-		    	logger.log(file, "data extracted and appended to the original userdata")
-		else:
-			logger.log(file, "user edited data saved. no extracting data")
-		   	save_to_file(text_process_lda(data), readmode="a+")
-		    	st.success(text_process_lda(data))
-		    	logger.log(file, "data extracted and appended to the original userdata")
-
-            if st.session_state['user_data']:    
-           
-                if st.checkbox("Accept Terms & Condition"):
-                    genre = st.radio("Download as",('PDF', 'DOC'))
-                   
-                    with open(os.path.join("userdata.txt"), 'r', encoding="latin-1") as df:
+	
+	if str_data or st.session_state['load_editor']:
+		data = run_editor(str_data)
+	
+	if st.session_state['str_value'] is not None:
+		
+		if st.button("Save & Extract") or st.session_state['load_state']:
+			logger.log(file, "Saving userdata")
+            		data = data + boundary
+            		save_to_file(data)
+            		model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])
+			
+			if model_select == "Latent Semantic Analysis":
+				logger.log(file, "user edited data saved. no extracting data")
+		   		save_to_file(text_process_lsa(data), readmode="a+")
+		    		st.success(text_process_lsa(data))
+		    		logger.log(file, "data extracted and appended to the original userdata")
+			
+			else:
+				logger.log(file, "user edited data saved. no extracting data")
+		   		save_to_file(text_process_lda(data), readmode="a+")
+		    		st.success(text_process_lda(data))
+		    		logger.log(file, "data extracted and appended to the original userdata")
+		
+		if st.session_state['user_data']:
+			if st.checkbox("Accept Terms & Condition"):
+				genre = st.radio("Download as",('PDF', 'DOC'))
+				with open(os.path.join("userdata.txt"), 'r', encoding="latin-1") as df:
                         
-                        if genre == 'PDF':
-                            text_to_pdf(df, 'keywords.pdf')
+                        	if genre == 'PDF':
+					text_to_pdf(df, 'keywords.pdf')
                            
-                            with open(os.path.join("keywords.pdf"), "rb") as pdf_file:
-                                PDFbyte = pdf_file.read()
-                                st.download_button(label="Export as PDF",data=PDFbyte,file_name="keywords.pdf",mime='application/octet-stream')
-
-                        else:
-                            text_doc(df, 'keywords')
+                            		with open(os.path.join("keywords.pdf"), "rb") as pdf_file:
+                              		PDFbyte = pdf_file.read()
+                                	st.download_button(label="Export as PDF",data=PDFbyte,file_name="keywords.pdf",mime='application/octet-stream')
+				else:
+                           		text_doc(df, 'keywords')
                           
-                            with open(os.path.join("keywords.doc"), "rb") as doc_file:
-                                docbyte = doc_file.read()
-                                st.download_button(label="Export as DOC",data=docbyte,file_name="keywords.doc",mime='application/octet-stream')
+                            		with open(os.path.join("keywords.doc"), "rb") as doc_file:
+                                	docbyte = doc_file.read()
+                              		st.download_button(label="Export as DOC",data=docbyte,file_name="keywords.doc",mime='application/octet-stream')
 
 elif option=="Topic Modelling and Labelling":
    
