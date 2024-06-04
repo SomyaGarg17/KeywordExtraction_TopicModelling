@@ -421,7 +421,7 @@ st.image(display,width=1000)
 # Sidebar options
 option = st.sidebar.selectbox('Navigation', 
                               ["Home","Keyword Extractor", "Topic Modelling and Labelling","Email Spam Classifier", 
-			       "Word Cloud", "N-Gram Analysis", "Named Entity Recognition",
+                                "Keyword Sentiment Analysis", "Word Cloud", "N-Gram Analysis", "Named Entity Recognition",
                                 "Text Summarizer"])
 
 if option == 'Home':
@@ -433,19 +433,21 @@ if option == 'Home':
 		)
     
 elif option=="Keyword Extractor":
-	file = open("log.txt", "a+")
-	logger = Logger()
-	
-	if "load_state" not in st.session_state:
-		st.session_state['load_state'] = False
-        	st.session_state['load_editor'] = False
-        	st.session_state['str_value'] = None
-		
-	if __name__ == '__main__':
-		st.session_state['user_data'] = 0
-        	st.session_state['load_state'] = True
-        	boundary = "\n"*4 + "=====Keywords======" + "\n"*4
-	st.title("Keyword Extractor")
+
+    file = open("log.txt", "a+")
+    logger = Logger()
+    
+    if "load_state" not in st.session_state:
+        st.session_state['load_state'] = False
+        st.session_state['load_editor'] = False
+        st.session_state['str_value'] = None
+
+    if __name__ == '__main__':
+        st.session_state['user_data'] = 0
+        st.session_state['load_state'] = True
+        boundary = "\n"*4 + "=====Keywords======" + "\n"*4
+
+        st.title("Keyword Extractor")
         st.caption("An application that automatically extracts key terms from large text documents using advanced algorithms. Ideal for improving content analysis and search functionality.")
         st.write("\n")
         st.subheader("Upload File")
@@ -453,47 +455,52 @@ elif option=="Keyword Extractor":
         logger.log(file, "init done")
         uploaded_file = st.file_uploader("Upload Doc or Docx File Only",type = [".doc","docx"])
         str_data = get_doc(uploaded_file)
-	
-	if str_data or st.session_state['load_editor']:
-		data = run_editor(str_data)
-	
-	if st.session_state['str_value'] is not None:
-		
-		if st.button("Save & Extract") or st.session_state['load_state']:
-			logger.log(file, "Saving userdata")
-            		data = data + boundary
-            		save_to_file(data)
-            		model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])
-			
-			if model_select == "Latent Semantic Analysis":
-				logger.log(file, "user edited data saved. no extracting data")
-		   		save_to_file(text_process_lsa(data), readmode="a+")
-		    		st.success(text_process_lsa(data))
-		    		logger.log(file, "data extracted and appended to the original userdata")
-			
-			else:
-				logger.log(file, "user edited data saved. no extracting data")
-		   		save_to_file(text_process_lda(data), readmode="a+")
-		    		st.success(text_process_lda(data))
-		    		logger.log(file, "data extracted and appended to the original userdata")
-		
-		if st.session_state['user_data']:
-			if st.checkbox("Accept Terms & Condition"):
-				genre = st.radio("Download as",('PDF', 'DOC'))
-				with open(os.path.join("userdata.txt"), 'r', encoding="latin-1") as df:
+
+    if str_data or st.session_state['load_editor']:
+        data = run_editor(str_data)
+
+    if st.session_state['str_value'] is not None:
+       
+        if st.button("Save & Extract") or st.session_state['load_state']:
+            logger.log(file, "Saving userdata")
+            data = data + boundary
+            save_to_file(data)
+            model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
+           
+            if model_select == "Latent Semantic Analysis":
+                logger.log(file, "user edited data saved. no extracting data")
+                save_to_file(text_process_lsa(data), readmode="a+")
+                st.success(text_process_lsa(data))
+                logger.log(file, "data extracted and appended to the original userdata")
+           
+            else:
+                logger.log(file, "user edited data saved. no extracting data")
+                save_to_file(text_process_lda(data), readmode="a+")
+                st.success(text_process_lda(data))
+                logger.log(file, "data extracted and appended to the original userdata")
+
+            
+
+            if st.session_state['user_data']:    
+           
+                if st.checkbox("Accept Terms & Condition"):
+                    genre = st.radio("Download as",('PDF', 'DOC'))
+                   
+                    with open(os.path.join("userdata.txt"), 'r', encoding="latin-1") as df:
                         
-                        	if genre == 'PDF':
-					text_to_pdf(df, 'keywords.pdf')
+                        if genre == 'PDF':
+                            text_to_pdf(df, 'keywords.pdf')
                            
-                            		with open(os.path.join("keywords.pdf"), "rb") as pdf_file:
-                              		PDFbyte = pdf_file.read()
-                                	st.download_button(label="Export as PDF",data=PDFbyte,file_name="keywords.pdf",mime='application/octet-stream')
-				else:
-                           		text_doc(df, 'keywords')
+                            with open(os.path.join("keywords.pdf"), "rb") as pdf_file:
+                                PDFbyte = pdf_file.read()
+                                st.download_button(label="Export as PDF",data=PDFbyte,file_name="keywords.pdf",mime='application/octet-stream')
+
+                        else:
+                            text_doc(df, 'keywords')
                           
-                            		with open(os.path.join("keywords.doc"), "rb") as doc_file:
-                                	docbyte = doc_file.read()
-                              		st.download_button(label="Export as DOC",data=docbyte,file_name="keywords.doc",mime='application/octet-stream')
+                            with open(os.path.join("keywords.doc"), "rb") as doc_file:
+                                docbyte = doc_file.read()
+                                st.download_button(label="Export as DOC",data=docbyte,file_name="keywords.doc",mime='application/octet-stream')
 
 elif option=="Topic Modelling and Labelling":
    
@@ -502,59 +509,65 @@ elif option=="Topic Modelling and Labelling":
    
     # Perform analysis based on the selected choice
     if choice == "On Text":
-	    st.subheader("Topic Modeling and Labeling on Text")
-	    if 'text_input' not in st.session_state:
-		    st.session_state.text_input = ''
-	    text_input = st.text_area("Paste enter text below", st.session_state.text_input)
+        st.subheader("Topic Modeling and Labeling on Text")
+        
+         # Create a text area widget to allow users to paste transcripts
+        text_input = st.text_area("Paste enter text below", height=400)
        
         # Model Selection 
-	    model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
-	    if text_input is not None:
-		    if st.button("Analyze Text"):
-			    st.session_state.text_input = text_input
-			    if model_select == "Latent Semantic Analysis":
-				    col1, col2, col3 = st.columns([1,1,1])
-	   
-				    with col1:
-					    st.info("Text is below")
-					    #Prints the text as the user provided
-					    st.success(text_input)
-		
-				    with col2:
-					    # Perform topic modeling on the transcript text
-					    topics = perform_topic_modeling(text_input)
-					    # Display the resulting topics in the app
-					    st.info("Topics in the Text")
-					    for topic in topics:
-						    st.success(f"{topic[0]}: {', '.join(topic[1])}")
-		
-				    with col3:
-					    st.info("Topic Labeling")
-					    labeling_text = text_input
-					    industry = label_topic(labeling_text)
-					    st.markdown("**Topic Labeling Industry Wise**")
-					    st.write(industry)
-			    else:
-				    col1, col2, col3 = st.columns([1,1,1])
-				    with col1:
-					    st.info("Text is below")
-					    st.success(text_input)
-		
-				    with col2:
-					    topics = perform_topic_modeling_LDA(text_input)
-					    # Display the resulting topics in the app
-					    st.info("Topics in the Text")
-					    for topic in topics:
-						    st.success(f"{topic[0]}: {', '.join(topic[1])}")
-		
-				    with col3:
-					    st.info("Topic Labeling")
-					    labeling_text = text_input
-					    #Performs topic Labeling
-					    industry = label_topic(labeling_text)
-					    st.markdown("**Topic Labeling Industry Wise**")
-					    st.write(industry)
-		            
+        model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
+        if text_input is not None:
+           
+            if st.button("Analyze Text"):
+           
+                if model_select == "Latent Semantic Analysis":
+                    col1, col2, col3 = st.columns([1,1,1])
+           
+                    with col1:
+                        st.info("Text is below")
+                        #Prints the text as the user provided
+                        st.success(text_input)
+
+                    with col2:
+                        # Perform topic modeling on the transcript text
+                        topics = perform_topic_modeling(text_input)
+                        # Display the resulting topics in the app
+                        st.info("Topics in the Text")
+                        for topic in topics:
+                            st.success(f"{topic[0]}: {', '.join(topic[1])}")
+
+                    with col3:
+                        st.info("Topic Labeling")
+                        labeling_text = text_input
+                        #Performs topic Labeling
+                        industry = label_topic(labeling_text)
+                        st.markdown("**Topic Labeling Industry Wise**")
+                        st.write(industry)
+          
+                else:
+                    col1, col2, col3 = st.columns([1,1,1])
+              
+                    with col1:
+                        st.info("Text is below")
+                        #Prints the text as the user provided
+                        st.success(text_input)
+
+                    with col2:
+                        # Perform topic modeling on the transcript text
+                        topics = perform_topic_modeling_LDA(text_input)
+                        # Display the resulting topics in the app
+                        st.info("Topics in the Text")
+                        for topic in topics:
+                            st.success(f"{topic[0]}: {', '.join(topic[1])}")
+
+                    with col3:
+                        st.info("Topic Labeling")
+                        labeling_text = text_input
+                        #Performs topic Labeling
+                        industry = label_topic(labeling_text)
+                        st.markdown("**Topic Labeling Industry Wise**")
+                        st.write(industry)
+            
     elif choice == "On Video":
         st.subheader("Topic Modeling and Labeling on Video")
        
@@ -645,6 +658,44 @@ elif option == "Email Spam Classifier":
 		else:
 			st.write("This message is **Not Spam**")
                
+# Keyword Sentiment Analysis
+elif option == "Keyword Sentiment Analysis":
+	st.header("Sentiment Analysis Tool")
+	st.subheader("Enter the statement that you want to analyze")
+	text_input = st.text_area("Enter sentence", height=50)
+	# Model Selection 
+	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
+
+	if st.button("Predict"):
+		
+		# Load the model 
+		if model_select == "SVC":
+			sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
+		elif model_select == "Logistic Regression":
+			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
+		elif model_select == "Naive Bayes":
+			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
+		
+		# Vectorize the inputs 
+		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+		vec_inputs = vectorizer.transform([text_input])
+		# Keyword extraction 
+		r = Rake(language='english')
+		r.extract_keywords_from_text(text_input)
+		# Get the important phrases
+		phrases = r.get_ranked_phrases()
+		
+        # Make the prediction 
+		if sentiment_model.predict(vec_inputs):
+			st.write("This statement is **Positve**")
+		else:
+			st.write("This statement is **Negative**")
+
+		# Display the important phrases
+		st.write("These are the **keywords** causing the above sentiment:")
+		for i, p in enumerate(phrases):
+			st.write(i+1, p)
+
 # Word Cloud Feature
 elif option == "Word Cloud":
 	st.header("Generate Word Cloud")
@@ -692,7 +743,6 @@ elif option == "Named Entity Recognition":
 
 # Text Summarizer 
 elif option == "Text Summarizer": 
-	nltk.download('punkt')
 	st.header("Text Summarization")
 	st.subheader("Enter a corpus that you want to summarize")
 	text_input = st.text_area("Enter a paragraph", height=150)
