@@ -468,14 +468,16 @@ elif option=="Keyword Extractor":
             model_select = st.selectbox("Model Selection", ["Latent Semantic Analysis", "Latent Dirichlet Allocation"])        
            
             if model_select == "Latent Semantic Analysis":
-                logger.log(file, "user edited data saved. no extracting data")
-                save_to_file(text_process_lsa(data), readmode="a+")
-                logger.log(file, "data extracted and appended to the original userdata")
+		    logger.log(file, "user edited data saved. no extracting data")
+		    save_to_file(text_process_lsa(data), readmode="a+")
+		    st.success(text_process_lsa(data))
+		    logger.log(file, "data extracted and appended to the original userdata")
            
             else:
-                logger.log(file, "user edited data saved. no extracting data")
-                save_to_file(text_process_lda(data), readmode="a+")
-                logger.log(file, "data extracted and appended to the original userdata")
+		    logger.log(file, "user edited data saved. no extracting data")
+		    save_to_file(text_process_lda(data), readmode="a+")
+		    st.success(text_process_lda(data))
+		    logger.log(file, "data extracted and appended to the original userdata")
 
             if st.session_state['user_data']:    
            
