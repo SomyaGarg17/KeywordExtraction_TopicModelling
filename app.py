@@ -414,7 +414,7 @@ def video_to_transcript(video_file):
 st.title('Keyword Extraction and Topic Modelling App\n', )
 st.write("Using Latent Semantic Analysis and Latent Dirichlet Allocation")
 
-display = Image.open('images/keywords-extraction.jpg')
+display = Image.open('images/image.webp')
 display = np.array(display)
 st.image(display,width=1000)
 
