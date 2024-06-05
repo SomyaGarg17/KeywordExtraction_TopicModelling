@@ -448,7 +448,7 @@ elif option=="Keyword Extractor":
         boundary = "\n"*4 + "=====Keywords======" + "\n"*4
 
         st.title("Keyword Extractor")
-        st.caption("An application that automatically extracts key terms from large text documents using advanced algorithms. Ideal for improving content analysis and search functionality.")
+        st.write("An application that automatically extracts key terms from large text documents using advanced algorithms. Ideal for improving content analysis and search functionality.")
         st.write("\n")
         st.subheader("Upload File")
 
@@ -504,7 +504,9 @@ elif option=="Keyword Extractor":
 
 elif option=="Topic Modelling and Labelling":
    
-    st.header("Topic Modelling and Labelling App")
+    st.title("Topic Modelling and Labelling App")
+    st.write("An application that identifies underlying topics in a collection of texts using Latent Dirichlret Allocation and Latent Semantic Analysis.")
+    st.write("\n")
     choice = st.selectbox("Select your choice", ["On Text", "On Video", "On CSV"])
    
     # Perform analysis based on the selected choice
@@ -637,69 +639,74 @@ elif option=="Topic Modelling and Labelling":
 
 #Email Spam Classifier                    
 elif option == "Email Spam Classifier":
-	st.header("Enter the email you want to send")
-	subject = st.text_input("Write the subject of the email", ' ')
-	message = st.text_area("Add email Text Here", ' ')
+    st.title("Email Spam Classifier")
+    st.write("An application that classifies if a given email is spam or not.")
+    st.write("\n")
+    st.header("Enter the email you want to send")
+    subject = st.text_input("Write the subject of the email", ' ')
+    message = st.text_area("Add email Text Here", ' ')
 
 	# Add button to check for spam 
-	if st.button("Check"):
+    if st.button("Check"):
         # Create input 
-		model_input = subject + ' ' + message
-		# Process the data 
-		model_input = sf.clean_text_spam(model_input)
-		# Vectorize the inputs 
-		vectorizer = joblib.load('Models/count_vectorizer_spam.sav')
-		vec_inputs = vectorizer.transform(model_input)	
-		# Load the model
-		spam_model = joblib.load('Models/spam_model.sav')
-		# Make the prediction 
-		if spam_model.predict(vec_inputs):
-			st.write("This message is **Spam**")
-		else:
-			st.write("This message is **Not Spam**")
+        model_input = subject + ' ' + message
+        # Process the data 
+        model_input = sf.clean_text_spam(model_input)
+        # Vectorize the inputs 
+        vectorizer = joblib.load('Models/count_vectorizer_spam.sav')
+        vec_inputs = vectorizer.transform(model_input)	
+        # Load the model
+        spam_model = joblib.load('Models/spam_model.sav')
+        # Make the prediction 
+        if spam_model.predict(vec_inputs):
+            st.write("This message is **Spam**")
+        else:
+            st.write("This message is **Not Spam**")
                
 # Keyword Sentiment Analysis
 elif option == "Keyword Sentiment Analysis":
-	st.header("Sentiment Analysis Tool")
-	st.subheader("Enter the statement that you want to analyze")
-	text_input = st.text_area("Enter sentence", height=50)
-	# Model Selection 
-	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
+    st.header("Sentiment Analysis Tool")
+    st.write("An application that analyze the sentiment of a given text as positive or negative.")
+    st.write("\n")
+    st.subheader("Enter the statement that you want to analyze")
+    text_input = st.text_area("Enter sentence", height=50)
+    # Model Selection 
+    model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
 
-	if st.button("Predict"):
-		
-		# Load the model 
-		if model_select == "SVC":
-			sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
-		elif model_select == "Logistic Regression":
-			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
-		elif model_select == "Naive Bayes":
-			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
-		
-		# Vectorize the inputs 
-		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
-		vec_inputs = vectorizer.transform([text_input])
-		# Keyword extraction 
-		r = Rake(language='english')
-		r.extract_keywords_from_text(text_input)
-		# Get the important phrases
-		phrases = r.get_ranked_phrases()
-		
+    if st.button("Predict"):
+        
+        # Load the model 
+        if model_select == "SVC":
+            sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
+        elif model_select == "Logistic Regression":
+            sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
+        elif model_select == "Naive Bayes":
+            sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
+        
+        # Vectorize the inputs 
+        vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+        vec_inputs = vectorizer.transform([text_input])
+        # Keyword extraction 
+        r = Rake(language='english')
+        r.extract_keywords_from_text(text_input)
+        # Get the important phrases
+        phrases = r.get_ranked_phrases()
+        
         # Make the prediction 
-		if sentiment_model.predict(vec_inputs):
-			st.write("This statement is **Positve**")
-		else:
-			st.write("This statement is **Negative**")
+        if sentiment_model.predict(vec_inputs):
+            st.write("This statement is **Positve**")
+        else:
+            st.write("This statement is **Negative**")
 
-		# Display the important phrases
-		st.write("These are the **keywords** causing the above sentiment:")
-		for i, p in enumerate(phrases):
-			st.write(i+1, p)
+        # Display the important phrases
+        st.write("These are the **keywords** causing the above sentiment:")
+        for i, p in enumerate(phrases):
+            st.write(i+1, p)
 
 # Word Cloud Feature
 elif option == "Word Cloud":
 	st.header("Generate Word Cloud")
-	st.subheader("Generate a word cloud from text containing the most popular words in the text.")
+	st.write("An application that generates a word cloud from text containing the most popular words in the text.")
 	# Ask for text or text file
 	st.header('Enter text or upload file')
 	text = st.text_area('Type Something', height=400)
@@ -717,7 +724,7 @@ elif option == "Word Cloud":
 # N-Gram Analysis Option 
 elif option == "N-Gram Analysis":
 	st.header("N-Gram Analysis")
-	st.subheader("This section displays the most commonly occuring N-Grams in your Data")
+	st.write("This section displays the most commonly occuring N-Grams in your Data")
 	# Ask for text or text file
 	st.header('Enter text below')
 	text = st.text_area('Type Something', height=400)
@@ -733,27 +740,30 @@ elif option == "N-Gram Analysis":
 
 # Named Entity Recognition 
 elif option == "Named Entity Recognition":
-	st.header("Enter the statement that you want to analyze")
-	st.markdown("**Random Sentence:** A Few Good Men is a 1992 American legal drama film set in Boston directed by Rob Reiner and starring Tom Cruise, Jack Nicholson, and Demi Moore. The film revolves around the court-martial of two U.S. Marines charged with the murder of a fellow Marine and the tribulations of their lawyers as they prepare a case to defend their clients.")
-	text_input = st.text_area("Enter sentence")
-	ner = en_core_web_sm.load()
-	doc = ner(str(text_input))
-	# Display 
-	spacy_streamlit.visualize_ner(doc, labels=ner.get_pipe('ner').labels)
+    st.header("Named Entity Recognizer")
+    st.write("An application that classifies text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values etc.")
+    st.write("\n")
+    text_input = st.text_area("Enter sentence")
+    ner = en_core_web_sm.load()
+    doc = ner(str(text_input))
+    # Display 
+    spacy_streamlit.visualize_ner(doc, labels=ner.get_pipe('ner').labels)
 
 # Text Summarizer 
 elif option == "Text Summarizer": 
-	st.header("Text Summarization")
-	st.subheader("Enter a corpus that you want to summarize")
-	text_input = st.text_area("Enter a paragraph", height=150)
-	sentence_count = len(sent_tokenize(text_input))
-	st.write("Number of sentences:", sentence_count)
-	model = st.sidebar.selectbox("Model Select", ["TextRank", "LexRank"])
-	ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
-	if st.button("Summarize"):
-		if model == "TextRank":
-			out = ts.text_sum_text(text_input, ratio=ratio)
-		else:
-			out = ts.text_sum_lex(text_input, ratio=ratio)
-		st.write("**Summary Output:**", out)
-		st.write("Number of output sentences:", len(sent_tokenize(out)))
+    st.header("Text Summarization")
+    st.write("An application that generates a concise summary of a given text using TextRank and LexRank algorithm.")
+    st.write("\n")
+    st.subheader("Enter a corpus that you want to summarize")
+    text_input = st.text_area("Enter a paragraph", height=150)
+    sentence_count = len(sent_tokenize(text_input))
+    st.write("Number of sentences:", sentence_count)
+    model = st.sidebar.selectbox("Model Select", ["TextRank", "LexRank"])
+    ratio = st.sidebar.slider("Select summary ratio", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
+    if st.button("Summarize"):
+        if model == "TextRank":
+            out = ts.text_sum_text(text_input, ratio=ratio)
+        else:
+            out = ts.text_sum_lex(text_input, ratio=ratio)
+        st.write("**Summary Output:**", out)
+        st.write("Number of output sentences:", len(sent_tokenize(out)))
