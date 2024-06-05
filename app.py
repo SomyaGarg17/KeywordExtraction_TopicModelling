@@ -40,6 +40,7 @@ from moviepy.editor import VideoFileClip
 warnings.filterwarnings(action='ignore')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config("Keyword Extraction and Topic Modelling",layout="wide",menu_items={'Get Help': 'https://www.extremelycoolapp.com/help','Report a bug': "https://www.extremelycoolapp.com/bug",'About': "# This is an *extremely* cool app for keyword extraction and topic modelling!"})
+nltk.download('stopwords')
 
 #### topic labeling ##########
 insurance_keywords = ['actuary', 'claims', 'coverage', 'deductible', 'policyholder', 'premium', 'underwriter', 
