@@ -379,11 +379,11 @@ def save_video(url):
 	try:
 		yt = YouTube(url)
 		stream = yt.streams.get_highest_resolution()
-	        filename = f"{yt.title}.mp4"
-	        output_path = os.getcwd()
-	        file_path = os.path.join(output_path, filename)
-	        stream.download(output_path, filename=filename)
-	        return yt.title, filename, file_path
+		filename = f"{yt.title}.mp4"
+		output_path = os.getcwd()
+		file_path = os.path.join(output_path, filename)
+		stream.download(output_path, filename=filename)
+		return yt.title, filename, file_path
 	except Exception as e:
 		st.error(f"An error occurred while downloading the video: {e}")
 		return None, None, None
@@ -392,26 +392,26 @@ def save_video(url):
 def video_to_transcript(video_path):
 	try:
 		model = load_model()  # Ensure your model is correctly loaded
-	        video_file = Path(video_path)
-	        if not video_file.exists():
-	            raise FileNotFoundError(f"File '{video_file}' not found.")
+		video_file = Path(video_path)
+		if not video_file.exists():
+			raise FileNotFoundError(f"File '{video_file}' not found.")
 	
 	        # Extract audio using moviepy
-	        with VideoFileClip(video_path) as video:
-	            audio_path = video_path.replace(".mp4", ".wav")
-	            video.audio.write_audiofile(audio_path)
+		with VideoFileClip(video_path) as video:
+			audio_path = video_path.replace(".mp4", ".wav")
+			video.audio.write_audiofile(audio_path)
 	
 	        # Load audio and transcribe
-	        audio, sr = librosa.load(audio_path, sr=16000)
-	        result = model.transcribe(audio)  # Ensure your model has a transcribe method
-	        transcript = result["text"]
-	        return transcript
+		audio, sr = librosa.load(audio_path, sr=16000)
+		result = model.transcribe(audio)  # Ensure your model has a transcribe method
+		transcript = result["text"]
+		return transcript
 	except audioread.NoBackendError:
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
-        	st.stop()
+		st.stop()
     	except Exception as e:
         	st.error(f"An error occurred while processing the video: {e}")
-        	st.stop()
+		st.stop()
 
 #Describing the Web Application
 
