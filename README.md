@@ -22,3 +22,5 @@ To run this application locally, follow these steps:
 1. Clone the repository
 2. To install all the libraries (preferably in a VM): pip install -r requirements.txt
 3. To run the app: streamlit run app.py
+
+Or you could run it locally on your system using : https://keywordextractiontopicmodelling.streamlit.app/
