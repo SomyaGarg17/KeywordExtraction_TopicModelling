@@ -102,6 +102,8 @@ mdurl==0.1.2
 
 more-itertools==10.2.0
 
+moviepy
+
 msgpack==1.0.8
 
 murmurhash==1.0.10
