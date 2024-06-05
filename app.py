@@ -378,7 +378,7 @@ def load_model():
 def save_video(url):
 	try:
 		yt = YouTube(url)
-	        stream = yt.streams.get_highest_resolution()
+		stream = yt.streams.get_highest_resolution()
 	        filename = f"{yt.title}.mp4"
 	        output_path = os.getcwd()
 	        file_path = os.path.join(output_path, filename)
