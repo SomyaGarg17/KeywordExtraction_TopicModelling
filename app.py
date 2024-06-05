@@ -393,20 +393,32 @@ def save_video(url):
         print(f"An error occurred: {e}")
         return None, None, None
 
-#This function converts the video into transcript
+
+def install_ffmpeg():
+	try:
+		subprocess.run(['sudo', 'apt-get', 'install', 'ffmpeg'], check=True)
+	except Exception as e:
+		st.error(f"Failed to install ffmpeg: {e}")
+		st.stop()
+
+try:
+	import ffmpeg
+except ImportError:
+	install_ffmpeg()
+
 def video_to_transcript(video_file):
-    
-    model = load_model()
-    video_file = Path(video_file)
-    if not video_file.exists():
-        raise FileNotFoundError(f"File '{video_file}' not found.")
-    
-    video,sr = librosa.load(video_file.as_posix(), sr=16000)
-    result = model.transcribe(video)
-    transcript = result["text"]
-   
-    return transcript
-    
+	try:
+		model = load_model()
+		video_file = Path(video_file)
+		if not video_file.exists():
+			raise FileNotFoundError(f"File '{video_file}' not found.")
+		video,sr = librosa.load(video_file.as_posix(), sr=16000)
+		result = model.transcribe(video)
+		transcript = result["text"]
+		return transcript
+	except audioread.NoBackendError:
+		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
+		st.stop()
 
 #Describing the Web Application
 
