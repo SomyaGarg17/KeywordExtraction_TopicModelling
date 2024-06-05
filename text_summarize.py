@@ -9,6 +9,7 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.text_rank import TextRankSummarizer
 from sumy.summarizers.lex_rank import LexRankSummarizer
 
+nltk.download('punkt')
 # Function to generate text summary using LexRank 
 def text_sum_lex(text, ratio=0.2):
     # Create parse object 
