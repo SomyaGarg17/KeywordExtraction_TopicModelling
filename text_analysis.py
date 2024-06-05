@@ -112,6 +112,7 @@ def create_wordcloud(text, image_path = None):
 
 # Function to plot the ngrams based on n and top k value
 def plot_ngrams(text, n=2, topk=15):
+    nltk.download('wordnet')
     '''
     Function to plot the most commonly occuring n-grams in bar plots 
     
