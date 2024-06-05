@@ -400,12 +400,11 @@ def video_to_transcript(video_path):
 		audio_path = video_path.replace(".mp4", ".wav")
 		video = AudioSegment.from_file(video_path, format="mp4")
 		video.export(audio_path, format="wav")
-
-        # Load audio and transcribe
-        	audio, sr = librosa.load(audio_path, sr=16000)
-        	result = model.transcribe(audio)  # Ensure your model has a transcribe method
-        	transcript = result["text"]
-        	return transcript
+		# Load audio and transcribe
+		audio, sr = librosa.load(audio_path, sr=16000)
+		result = model.transcribe(audio)  # Ensure your model has a transcribe method
+		transcript = result["text"]
+		return transcript
 	except audioread.NoBackendError:
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
 		st.stop()
