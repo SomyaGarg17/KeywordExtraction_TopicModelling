@@ -34,7 +34,7 @@ from nltk.tokenize import sent_tokenize
 import nltk
 import audioread
 import subprocess
-from moviepy.editor import VideoFileClip
+from pydub import AudioSegment
 
 # Warnings ignore 
 warnings.filterwarnings(action='ignore')
