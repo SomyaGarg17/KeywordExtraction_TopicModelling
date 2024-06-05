@@ -374,53 +374,44 @@ def load_model():
 
 #This function is responsible for downloading a YouTube video and saving it 
 #as an MP4 file
+# Function to download YouTube video
 def save_video(url):
-   
-    try:
-        # Create YouTube object
-        yt = YouTube(url)        
-        # Get the first available stream
-        stream = yt.streams.first()
-        # Define the filename with the video title and .mp4 extension
-        filename = f"{yt.title}.mp4"
-        # Get the current working directory
-        output_path = os.getcwd()
-        # Combine the output path and filename to get the full file path
-        file_path = os.path.join(output_path, filename)
-        # Download the video to the specified path
-        stream.download(filename=filename)
-        # Return the video title, filename, and full file path
-        return yt.title, filename, file_path
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        return None, None, None
-
-
-def install_ffmpeg():
 	try:
-		subprocess.run(['sudo', 'apt-get', 'install', 'ffmpeg'], check=True)
+		yt = YouTube(url)
+	        stream = yt.streams.get_highest_resolution()
+	        filename = f"{yt.title}.mp4"
+	        output_path = os.getcwd()
+	        file_path = os.path.join(output_path, filename)
+	        stream.download(output_path, filename=filename)
+	        return yt.title, filename, file_path
 	except Exception as e:
-		st.error(f"Failed to install ffmpeg: {e}")
-		st.stop()
+		st.error(f"An error occurred while downloading the video: {e}")
+		return None, None, None
 
-try:
-	import ffmpeg
-except ImportError:
-	install_ffmpeg()
 
-def video_to_transcript(video_file):
+def video_to_transcript(video_path):
 	try:
-		model = load_model()
-		video_file = Path(video_file)
-		if not video_file.exists():
-			raise FileNotFoundError(f"File '{video_file}' not found.")
-		video,sr = librosa.load(video_file.as_posix(), sr=16000)
-		result = model.transcribe(video)
-		transcript = result["text"]
-		return transcript
+		model = load_model()  # Ensure your model is correctly loaded
+	        video_file = Path(video_path)
+	        if not video_file.exists():
+	            raise FileNotFoundError(f"File '{video_file}' not found.")
+	
+	        # Extract audio using moviepy
+	        with VideoFileClip(video_path) as video:
+	            audio_path = video_path.replace(".mp4", ".wav")
+	            video.audio.write_audiofile(audio_path)
+	
+	        # Load audio and transcribe
+	        audio, sr = librosa.load(audio_path, sr=16000)
+	        result = model.transcribe(audio)  # Ensure your model has a transcribe method
+	        transcript = result["text"]
+	        return transcript
 	except audioread.NoBackendError:
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
-		st.stop()
+        	st.stop()
+    	except Exception as e:
+        	st.error(f"An error occurred while processing the video: {e}")
+        	st.stop()
 
 #Describing the Web Application
 
