@@ -32,6 +32,8 @@ from collections import Counter
 import en_core_web_sm
 from nltk.tokenize import sent_tokenize
 import nltk
+import audioread
+import subprocess
 
 
 # Warnings ignore 
