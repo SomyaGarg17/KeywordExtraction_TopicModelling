@@ -1,6 +1,6 @@
 #
 
-
+import nltk
 # Import necessary libraries
 from nltk.tokenize import sent_tokenize
 import math
