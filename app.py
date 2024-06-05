@@ -409,8 +409,8 @@ def video_to_transcript(video_path):
 	except audioread.NoBackendError:
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
 		st.stop()
-    	except Exception as e:
-        	st.error(f"An error occurred while processing the video: {e}")
+	except Exception as e:
+		st.error(f"An error occurred while processing the video: {e}")
 		st.stop()
 
 #Describing the Web Application
