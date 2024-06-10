@@ -405,16 +405,16 @@ def video_to_transcript(video_path):
 		logging.debug(f"Extracting audio from video: {video_path}")
         # Extract audio using pydub
 		audio_path = video_path.replace(".mp4", ".wav")
-        	video = AudioSegment.from_file(video_path, format="mp4")
-        	video.export(audio_path, format="wav")
-        	logging.debug(f"Audio extracted to: {audio_path}")
+		video = AudioSegment.from_file(video_path, format="mp4")
+		video.export(audio_path, format="wav")
+		logging.debug(f"Audio extracted to: {audio_path}")
 
         # Load audio and transcribe
-        	audio, sr = librosa.load(audio_path, sr=16000)
-        	result = model.transcribe(audio)  # Ensure your model has a transcribe method
-        	transcript = result["text"]
-        	logging.debug(f"Transcript generated: {transcript}")
-        	return transcript
+		audio, sr = librosa.load(audio_path, sr=16000)
+		result = model.transcribe(audio)  # Ensure your model has a transcribe method
+		transcript = result["text"]
+		logging.debug(f"Transcript generated: {transcript}")
+		return transcript
 	except audioread.NoBackendError:
 		logging.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
