@@ -675,51 +675,64 @@ elif option == "Keyword Sentiment Analysis":
 	st.header("Sentiment Analysis Tool")
 	st.write("An application that analyze the sentiment of a given text as positive or negative.")
 	st.write("\n")
-	st.subheader("Enter the statement that you want to analyze")
-	text_input = st.text_area("Enter sentence", height=50)
 	try:
 		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
 	except FileNotFoundError:
 		st.error("Vectorizer model file not found. Please check the path.")
 		st.stop()
-	# Model Selection
+
+# Dummy fit to avoid NotFittedError (remove this if vectorizer is correctly fitted before saving)
+	if not hasattr(vectorizer, 'vocabulary_'):
+		st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
+		st.stop()
+	st.subheader("Enter the statement that you want to analyze")
+	text_input = st.text_area("Enter sentence", height=50)
+
+# Model Selection
 	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
 	if st.button("Predict"):
-        
-        # Load the model 
-		if model_select == "SVC":
-			sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
-		elif model_select == "Logistic Regression":
-			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
-		elif model_select == "Naive Bayes":
-			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
+    # Load the model based on selection
+		try:
+			if model_select == "SVC":
+				sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
+			elif model_select == "Logistic Regression":
+				sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
+			elif model_select == "Naive Bayes":
+				sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
+		except FileNotFoundError:
+			st.error(f"{model_select} model file not found. Please check the path.")
+			st.stop()
+
+    # Transform the input text
 		try:
 			vec_inputs = vectorizer.transform([text_input])
-		except NotFittedError:
-			st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
-			st.stop()
 		except ValueError as e:
 			st.error(f"An error occurred while transforming the text: {e}")
 			st.stop()
-        # Vectorize the inputs 
-		vectoizer = vectorizer.fit(vectorizer)
-		vec_inputs = vectorizer.transform([text_input])
-        # Keyword extraction 
+
+    # Keyword extraction
 		r = Rake(language='english')
 		r.extract_keywords_from_text(text_input)
-        # Get the important phrases
-		phrases = r.get_ranked_phrases()
-        
-        # Make the prediction 
-		if sentiment_model.predict(vec_inputs):
-			st.write("This statement is **Positve**")
-		else:
-			st.write("This statement is **Negative**")
+    		phrases = r.get_ranked_phrases()
 
-        # Display the important phrases
+    # Make the prediction
+		try:
+			prediction = sentiment_model.predict(vec_inputs)
+			if prediction[0] == 1:
+				st.write("This statement is **Positive**")
+			else:
+				st.write("This statement is **Negative**")
+		except NotFittedError:
+			st.error("The sentiment model is not fitted. Please fit the model with training data.")
+			st.stop()
+		except Exception as e:
+			st.error(f"An error occurred during prediction: {e}")
+			st.stop()
+
+    # Display the important phrases
 		st.write("These are the **keywords** causing the above sentiment:")
-		for i, p in enumerate(phrases):
-			st.write(i+1, p)
+    		for i, p in enumerate(phrases):
+			st.write(f"{i+1}. {p}")
 
 # Word Cloud Feature
 elif option == "Word Cloud":
