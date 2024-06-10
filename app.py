@@ -670,26 +670,26 @@ elif option == "Email Spam Classifier":
                
 # Keyword Sentiment Analysis
 elif option == "Keyword Sentiment Analysis":
-    st.header("Sentiment Analysis Tool")
-    st.write("An application that analyze the sentiment of a given text as positive or negative.")
-    st.write("\n")
-    st.subheader("Enter the statement that you want to analyze")
-    text_input = st.text_area("Enter sentence", height=50)
-    # Model Selection 
-    model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
-
-    if st.button("Predict"):
+	st.header("Sentiment Analysis Tool")
+	st.write("An application that analyze the sentiment of a given text as positive or negative.")
+	st.write("\n")
+	st.subheader("Enter the statement that you want to analyze")
+	text_input = st.text_area("Enter sentence", height=50)
+	# Model Selection
+	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
+	if st.button("Predict"):
         
         # Load the model 
-        if model_select == "SVC":
-            sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
-        elif model_select == "Logistic Regression":
-            sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
-        elif model_select == "Naive Bayes":
-            sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
+		if model_select == "SVC":
+			sentiment_model = joblib.load('Models/SVC_sentiment_model.sav')
+		elif model_select == "Logistic Regression":
+			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
+		elif model_select == "Naive Bayes":
+			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
         
         # Vectorize the inputs 
-        vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+	vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+	vectoizer = vectorizer.fit(vectorizer)    
         vec_inputs = vectorizer.transform([text_input])
         # Keyword extraction 
         r = Rake(language='english')
