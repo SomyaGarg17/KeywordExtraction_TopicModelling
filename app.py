@@ -35,6 +35,8 @@ import nltk
 import audioread
 import subprocess
 from pydub import AudioSegment
+from sklearn.exceptions import NotFittedError
+
 
 # Warnings ignore 
 warnings.filterwarnings(action='ignore')
@@ -675,6 +677,7 @@ elif option == "Keyword Sentiment Analysis":
 	st.write("\n")
 	st.subheader("Enter the statement that you want to analyze")
 	text_input = st.text_area("Enter sentence", height=50)
+	vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
 	# Model Selection
 	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
 	if st.button("Predict"):
@@ -686,9 +689,13 @@ elif option == "Keyword Sentiment Analysis":
 			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
 		elif model_select == "Naive Bayes":
 			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
-        
+			
+        	try:
+			vec_inputs = vectorizer.transform([text_input])
+		except NotFittedError:
+			st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
+			st.stop()
         # Vectorize the inputs 
-	vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
 	vectoizer = vectorizer.fit(vectorizer)
 	vec_inputs = vectorizer.transform([text_input])
         # Keyword extraction 
