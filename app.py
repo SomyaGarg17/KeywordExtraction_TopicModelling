@@ -689,8 +689,7 @@ elif option == "Keyword Sentiment Analysis":
 			sentiment_model = joblib.load('Models/LR_sentiment_model.sav')
 		elif model_select == "Naive Bayes":
 			sentiment_model = joblib.load('Models/NB_sentiment_model.sav')
-			
-        	try:
+		try:
 			vec_inputs = vectorizer.transform([text_input])
 		except NotFittedError:
 			st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
