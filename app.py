@@ -713,8 +713,7 @@ elif option == "Keyword Sentiment Analysis":
     # Keyword extraction
 		r = Rake(language='english')
 		r.extract_keywords_from_text(text_input)
-    		phrases = r.get_ranked_phrases()
-
+		phrases = r.get_ranked_phrases()
     # Make the prediction
 		try:
 			prediction = sentiment_model.predict(vec_inputs)
