@@ -730,7 +730,7 @@ elif option == "Keyword Sentiment Analysis":
 
     # Display the important phrases
 		st.write("These are the **keywords** causing the above sentiment:")
-    		for i, p in enumerate(phrases):
+		for i, p in enumerate(phrases):
 			st.write(f"{i+1}. {p}")
 
 # Word Cloud Feature
