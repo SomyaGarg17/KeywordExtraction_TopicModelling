@@ -36,6 +36,7 @@ import audioread
 import subprocess
 from pydub import AudioSegment
 from sklearn.exceptions import NotFittedError
+import ffprobe
 
 
 # Warnings ignore 
