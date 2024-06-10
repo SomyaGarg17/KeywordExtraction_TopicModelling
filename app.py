@@ -387,11 +387,13 @@ def save_video(url):
 		output_path = os.getcwd()
 		file_path = os.path.join(output_path, filename)
 		stream.download(output_path, filename=filename)
+		st.info("Video downloaded successfully")
+		logging.debug(f"Video downloaded: {file_path}")
 		return yt.title, filename, file_path
 	except Exception as e:
+		logging.error(f"Error downloading video: {e}")
 		st.error(f"An error occurred while downloading the video: {e}")
 		return None, None, None
-
 
 def video_to_transcript(video_path):
 	try:
@@ -399,22 +401,29 @@ def video_to_transcript(video_path):
 		video_file = Path(video_path)
 		if not video_file.exists():
 			raise FileNotFoundError(f"File '{video_file}' not found.")
-
+			
+		logging.debug(f"Extracting audio from video: {video_path}")
         # Extract audio using pydub
 		audio_path = video_path.replace(".mp4", ".wav")
-		video = AudioSegment.from_file(video_path, format="mp4")
-		video.export(audio_path, format="wav")
-		# Load audio and transcribe
-		audio, sr = librosa.load(audio_path, sr=16000)
-		result = model.transcribe(audio)  # Ensure your model has a transcribe method
-		transcript = result["text"]
-		return transcript
+        	video = AudioSegment.from_file(video_path, format="mp4")
+        	video.export(audio_path, format="wav")
+        	logging.debug(f"Audio extracted to: {audio_path}")
+
+        # Load audio and transcribe
+        	audio, sr = librosa.load(audio_path, sr=16000)
+        	result = model.transcribe(audio)  # Ensure your model has a transcribe method
+        	transcript = result["text"]
+        	logging.debug(f"Transcript generated: {transcript}")
+        	return transcript
 	except audioread.NoBackendError:
+		logging.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
 		st.error("No backend available for audioread. Ensure ffmpeg or avconv is installed.")
 		st.stop()
 	except Exception as e:
+		logging.error(f"Error processing video: {e}")
 		st.error(f"An error occurred while processing the video: {e}")
 		st.stop()
+
 
 #Describing the Web Application
 
