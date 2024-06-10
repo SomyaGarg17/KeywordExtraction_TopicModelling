@@ -696,24 +696,24 @@ elif option == "Keyword Sentiment Analysis":
 			st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
 			st.stop()
         # Vectorize the inputs 
-	vectoizer = vectorizer.fit(vectorizer)
-	vec_inputs = vectorizer.transform([text_input])
+		vectoizer = vectorizer.fit(vectorizer)
+		vec_inputs = vectorizer.transform([text_input])
         # Keyword extraction 
-	r = Rake(language='english')
-	r.extract_keywords_from_text(text_input)
+		r = Rake(language='english')
+		r.extract_keywords_from_text(text_input)
         # Get the important phrases
-	phrases = r.get_ranked_phrases()
+		phrases = r.get_ranked_phrases()
         
         # Make the prediction 
-	if sentiment_model.predict(vec_inputs):
-		st.write("This statement is **Positve**")
-	else:
-		st.write("This statement is **Negative**")
+		if sentiment_model.predict(vec_inputs):
+			st.write("This statement is **Positve**")
+		else:
+			st.write("This statement is **Negative**")
 
         # Display the important phrases
-	st.write("These are the **keywords** causing the above sentiment:")
-	for i, p in enumerate(phrases):
-		st.write(i+1, p)
+		st.write("These are the **keywords** causing the above sentiment:")
+		for i, p in enumerate(phrases):
+			st.write(i+1, p)
 
 # Word Cloud Feature
 elif option == "Word Cloud":
