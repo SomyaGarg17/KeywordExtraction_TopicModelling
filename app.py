@@ -705,6 +705,7 @@ elif option == "Keyword Sentiment Analysis":
 
     # Transform the input text
 		try:
+			vectorizer.fit([text_input)
 			vec_inputs = vectorizer.transform([text_input])
 		except ValueError as e:
 			st.error(f"An error occurred while transforming the text: {e}")
