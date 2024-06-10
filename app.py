@@ -677,7 +677,11 @@ elif option == "Keyword Sentiment Analysis":
 	st.write("\n")
 	st.subheader("Enter the statement that you want to analyze")
 	text_input = st.text_area("Enter sentence", height=50)
-	vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+	try:
+		vectorizer = joblib.load('Models/tfidf_vectorizer_sentiment_model.sav')
+	except FileNotFoundError:
+		st.error("Vectorizer model file not found. Please check the path.")
+		st.stop()
 	# Model Selection
 	model_select = st.selectbox("Model Selection", ["Naive Bayes", "SVC", "Logistic Regression"])
 	if st.button("Predict"):
@@ -693,6 +697,9 @@ elif option == "Keyword Sentiment Analysis":
 			vec_inputs = vectorizer.transform([text_input])
 		except NotFittedError:
 			st.error("The vectorizer is not fitted. Please fit the vectorizer with training data.")
+			st.stop()
+		except ValueError as e:
+			st.error(f"An error occurred while transforming the text: {e}")
 			st.stop()
         # Vectorize the inputs 
 		vectoizer = vectorizer.fit(vectorizer)
