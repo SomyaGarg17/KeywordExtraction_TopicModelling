@@ -54,6 +54,8 @@ filelock==3.14.0
 
 fonttools==4.53.0
 
+ffmpeg
+
 fpdf==1.7.2
 
 gensim==4.3.2
