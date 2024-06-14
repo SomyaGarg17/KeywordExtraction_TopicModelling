@@ -619,43 +619,32 @@ elif option=="Topic Modelling and Labelling":
                     st.write(industry)
                 
     elif choice == "On CSV":
-        st.subheader("Topic Modeling and Labeling on CSV File")
-       
-        # Create a file uploader widget to allow users to upload a CSV file
-        upload_csv = st.file_uploader("Upload your CSV file", type=['csv'])
-
-        if upload_csv is not None:
-
-            if st.button("Analyze CSV File"):
-                col1, col2 = st.columns([1,2])
-
-                with col1:
-			st.info("CSV File uploaded")
-			csv_file = upload_csv.name
-                   
-                    # Opens the CSV file(if exists) as prints on the screen
-			with open(os.path.join(csv_file),"wb") as f: 
-				f.write(upload_csv.getbuffer()) 
-			print(csv_file)
-			df = pd.read_csv(csv_file)
-			df.columns = df.columns.str.strip()
-			df = df.fillna('')
-			df = df.astype(str)
-			st.dataframe(df)
-
-                with col2:
-                    data_list = df['Data'].tolist()
-                    industry_list = []
-                   
-                    for i in data_list:
+	    st.subheader("Topic Modeling and Labeling on CSV File")
+	    upload_csv = st.file_uploader("Upload your CSV file", type=['csv'])
+	    if upload_csv is not None:
+		    if st.button("Analyze CSV File"):
+			    col1, col2 = st.columns([1,2])
+			    with col1:
+				    st.info("CSV File uploaded")
+				    csv_file = upload_csv.name
+				    with open(os.path.join(csv_file),"wb") as f: 
+					    f.write(upload_csv.getbuffer())
+					print(csv_file)
+				    df = pd.read_csv(csv_file)
+				    df.columns = df.columns.str.strip()
+				    df = df.fillna('')
+				    df = df.astype(str)
+				    st.dataframe(df)
+			with col2:
+				data_list = df['Data'].tolist()
+				industry_list = []
+				for i in data_list:
                         #Performs Topic Labelling
-                        industry = label_topic(i)
-                        industry_list.append(industry)
-                  
-                    df['Industry'] = industry_list
-                    st.info("Topic Modeling and Labeling")
-                    st.dataframe(df)
-
+					industry = label_topic(i)
+					industry_list.append(industry)
+				df['Industry'] = industry_list
+				st.info("Topic Modeling and Labeling")
+				st.dataframe(df)
 #Email Spam Classifier                    
 elif option == "Email Spam Classifier":
     st.title("Email Spam Classifier")
