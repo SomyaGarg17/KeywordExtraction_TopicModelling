@@ -629,7 +629,7 @@ elif option=="Topic Modelling and Labelling":
 				    csv_file = upload_csv.name
 				    with open(os.path.join(csv_file),"wb") as f: 
 					    f.write(upload_csv.getbuffer())
-					print(csv_file)
+				    print(csv_file)
 				    df = pd.read_csv(csv_file)
 				    df.columns = df.columns.str.strip()
 				    df = df.fillna('')
