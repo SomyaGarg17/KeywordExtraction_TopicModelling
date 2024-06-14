@@ -638,7 +638,7 @@ elif option=="Topic Modelling and Labelling":
                         f.write(upload_csv.getbuffer()) 
                   
                     print(csv_file)
-                    df = pd.read_csv(csv_file, encoding= 'unicode_escape')
+                    df = pd.read_csv(csv_file)
                     st.dataframe(df)
 
                 with col2:
