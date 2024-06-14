@@ -626,23 +626,12 @@ elif option=="Topic Modelling and Labelling":
 			    col1, col2 = st.columns([1, 2])
 			    with col1:
 				    st.info("CSV File uploaded")
-				    try:
-					    df = pd.read_csv(upload_csv)
-				    except Exception as e:
-					    st.error(f"Error reading the CSV file: {e}")
-					    df = None
-				    if df is not None:
-					    df.columns = df.columns.str.strip()
-					    st.write("DataFrame Info:")
-					    buffer = StringIO()
-					    df.info(buf=buffer)
-					    s = buffer.getvalue()
-					    st.text(s)
-					    df = df.fillna('')
-					    df = df.astype(str)
-					    st.dataframe(df)
-				    else:
-					    st.error("Failed to load the DataFrame from the CSV file.")
+				    csv_file = upload_csv.name
+				    with open(os.path.join(csv_file),"wb") as f: 
+					    f.write(upload_csv.getbuffer()) 
+				    print(csv_file)
+				    df = pd.read_csv(csv_file, encoding= 'unicode_escape')
+				    st.dataframe(df)
 			    with col2:
 				    data_list = df['Data'].tolist()
 				    industry_list = []
