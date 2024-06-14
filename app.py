@@ -638,26 +638,20 @@ elif option=="Topic Modelling and Labelling":
 					    df.info(buf=buffer)
 					    s = buffer.getvalue()
 					    st.text(s)
-					    st.write("DataFrame Head:")
-					    st.write(df.head())
 					    df = df.fillna('')
 					    df = df.astype(str)
 					    st.dataframe(df)
 				    else:
 					    st.error("Failed to load the DataFrame from the CSV file.")
 			    with col2:
-				    if df is not None:
-					    if 'Data' in df.columns:
-						    data_list = df['Data'].tolist()
-						    industry_list = []
-						    for i in data_list:
-							    industry = label_topic(i)
-							    industry_list.append(industry)
-						    df['Industry'] = industry_list
-						    st.info("Topic Modeling and Labeling")
-						    st.dataframe(df)
-					    else:
-						    st.error("The column 'Data' does not exist in the uploaded CSV file.")
+				    data_list = df['Data'].tolist()
+				    industry_list = []
+				    for i in data_list:
+					    industry = label_topic(i)
+					    industry_list.append(industry)
+				    df['Industry'] = industry_list
+				    st.info("Topic Modeling and Labeling")
+				    st.dataframe(df)
 					    
 #Email Spam Classifier                    
 elif option == "Email Spam Classifier":
