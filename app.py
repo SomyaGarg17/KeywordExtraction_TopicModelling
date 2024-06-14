@@ -630,16 +630,18 @@ elif option=="Topic Modelling and Labelling":
                 col1, col2 = st.columns([1,2])
 
                 with col1:
-                    st.info("CSV File uploaded")
-                    csv_file = upload_csv.name
+			st.info("CSV File uploaded")
+			csv_file = upload_csv.name
                    
                     # Opens the CSV file(if exists) as prints on the screen
-                    with open(os.path.join(csv_file),"wb") as f: 
-                        f.write(upload_csv.getbuffer()) 
-                  
-                    print(csv_file)
-                    df = pd.read_csv(csv_file)
-                    st.dataframe(df)
+			with open(os.path.join(csv_file),"wb") as f: 
+				f.write(upload_csv.getbuffer()) 
+			print(csv_file)
+			df = pd.read_csv(csv_file)
+			df.columns = df.columns.str.strip()
+			df = df.fillna('')
+			df = df.astype(str)
+			st.dataframe(df)
 
                 with col2:
                     data_list = df['Data'].tolist()
