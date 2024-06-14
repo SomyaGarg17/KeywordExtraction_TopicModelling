@@ -628,6 +628,8 @@ elif option=="Topic Modelling and Labelling":
 				    st.info("CSV File uploaded")
 				    df = pd.read_csv(upload_csv)
 				    df.columns = df.columns.str.strip()
+				    st.write("DataFrame Info:")
+				    st.write(df.info())
 				    df = df.fillna('')
 				    df = df.astype(str)
 				    st.dataframe(df)
