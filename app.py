@@ -635,16 +635,16 @@ elif option=="Topic Modelling and Labelling":
 				    df = df.fillna('')
 				    df = df.astype(str)
 				    st.dataframe(df)
-			with col2:
-				data_list = df['Data'].tolist()
-				industry_list = []
-				for i in data_list:
+			    with col2:
+				    data_list = df['Data'].tolist()
+				    industry_list = []
+				    for i in data_list:
                         #Performs Topic Labelling
-					industry = label_topic(i)
-					industry_list.append(industry)
-				df['Industry'] = industry_list
-				st.info("Topic Modeling and Labeling")
-				st.dataframe(df)
+					    industry = label_topic(i)
+					    industry_list.append(industry)
+				    df['Industry'] = industry_list
+				    st.info("Topic Modeling and Labeling")
+				    st.dataframe(df)
 #Email Spam Classifier                    
 elif option == "Email Spam Classifier":
     st.title("Email Spam Classifier")
